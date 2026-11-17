@@ -155,9 +155,11 @@ def test_config_rejects_bad_values_and_unknown_keys():
     bad = copy.deepcopy(d); bad["design"]["typo_field"] = 1
     with pytest.raises(ValueError):
         cfgmod.from_dict(bad)
-    bad = copy.deepcopy(d); bad["distributions"]["conditions"] = ["nonexistent"]
-    with pytest.raises(ValueError):
-        cfgmod.from_dict(bad)
+    for section, key, val in (("distributions", "conditions", ["nonexistent"]), ("distributions", "conditions", []),
+                              ("design", "trials_per_block", 0), ("design", "blocks_per_condition", 0)):
+        bad = copy.deepcopy(d); bad[section][key] = val
+        with pytest.raises(ValueError):
+            cfgmod.from_dict(bad)
 
 
 # -- session / logging ------------------------------------------------------------

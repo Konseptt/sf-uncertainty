@@ -92,6 +92,8 @@ class ExperimentConfig:
         if not (0 <= s.iti_ms[0] <= s.iti_ms[1]): err.append("stimulus.iti_ms must be (lo, hi) with 0 <= lo <= hi")
         if not 0 < d.sf_min_cpd < d.sf_max_cpd: err.append("need 0 < sf_min_cpd < sf_max_cpd")
         if d.n_levels < 2: err.append("n_levels >= 2")
+        if not d.conditions: err.append("distributions.conditions must not be empty")
+        if g.trials_per_block < 1 or g.blocks_per_condition < 1: err.append("trials_per_block and blocks_per_condition must be >= 1")
         unknown = set(d.conditions) - set(CONDITIONS) - set(d.custom)
         if unknown: err.append(f"unknown conditions {sorted(unknown)}")
         if g.trials_per_block < 2 * d.n_levels and g.sampling == "fixed_count":
