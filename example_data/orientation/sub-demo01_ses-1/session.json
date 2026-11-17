@@ -1,0 +1,531 @@
+{
+  "participant": "demo01",
+  "session": 1,
+  "cb_index": 1,
+  "seed": 2176909715364826561,
+  "config_hash": "fe7dfaf97c3f3455",
+  "config": {
+    "study_seed": 20251117,
+    "monitor": {
+      "width_cm": 53.1,
+      "distance_cm": 57.0,
+      "width_px": 1920,
+      "height_px": 1080,
+      "refresh_hz": 60.0,
+      "calibrated": false,
+      "gamma": null,
+      "name": "demo-uncalibrated"
+    },
+    "stimulus": {
+      "contrast": 0.5,
+      "envelope": "fixed_deg",
+      "envelope_sd_deg": 0.75,
+      "envelope_sd_cycles": 1.5,
+      "eccentricity_deg": 5.0,
+      "polar_angle_deg": 0.0,
+      "base_orientation_deg": 0.0,
+      "tilt_deg": 3.0,
+      "randomize_phase": true,
+      "duration_ms": 100.0,
+      "fixation_ms": 500.0,
+      "response_window_ms": 1500.0,
+      "iti_ms": [
+        800.0,
+        1400.0
+      ],
+      "fixation_size_deg": 0.3,
+      "background_rgb": 0.0
+    },
+    "distributions": {
+      "sf_min_cpd": 1.0,
+      "sf_max_cpd": 4.0,
+      "n_levels": 9,
+      "matching": "moment_matched",
+      "narrow_sd": 0.2,
+      "broad_sd": 0.5,
+      "skew_alpha": 6.0,
+      "bimodal_sep": 1.0,
+      "bimodal_sd": 0.2,
+      "target_sd": null,
+      "conditions": [
+        "narrow",
+        "broad",
+        "uniform",
+        "right_skewed",
+        "left_skewed",
+        "bimodal"
+      ],
+      "custom": {}
+    },
+    "design": {
+      "paradigm": "orientation",
+      "sampling": "fixed_count",
+      "trials_per_block": 36,
+      "blocks_per_condition": 1,
+      "counterbalance": "williams",
+      "practice_trials": 6,
+      "calibration_block": true,
+      "calibration_trials_per_level": 6,
+      "staircase_start_tilt": 8.0,
+      "staircase_step": 1.0,
+      "staircase_min_step": 0.125,
+      "cue": "histogram",
+      "probe_rate": 0.5,
+      "probe_sf_min_cpd": 0.5,
+      "probe_sf_max_cpd": 8.0,
+      "probe_n_levels": 9,
+      "trigger": "none",
+      "trigger_key": "5",
+      "markers": "none",
+      "serial_port": ""
+    },
+    "key_left": "left",
+    "key_right": "right",
+    "key_quit": "escape",
+    "keyboard_backend": "ptb",
+    "output_dir": "data/demo",
+    "min_px_per_cycle": 4.0,
+    "max_frame_rate_error": 0.01
+  },
+  "software": {
+    "sfu": "0.1.0",
+    "python": "3.12.15",
+    "numpy": "2.5.5",
+    "platform": "macOS-27.3-arm64-arm-64bit",
+    "psychopy": "not installed",
+    "git_commit": "none"
+  },
+  "backend": "headless",
+  "measured_refresh_hz": null,
+  "block_order": [
+    "broad",
+    "uniform",
+    "narrow",
+    "right_skewed",
+    "bimodal",
+    "left_skewed"
+  ],
+  "grid_log2": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0
+  ],
+  "cue_symbols": {
+    "bimodal": "F",
+    "broad": "D",
+    "left_skewed": "B",
+    "narrow": "A",
+    "right_skewed": "E",
+    "uniform": "C"
+  },
+  "conditions": {
+    "narrow": {
+      "spec": {
+        "family": "gaussian",
+        "params": {
+          "loc": 1.0,
+          "scale": 0.2
+        }
+      },
+      "pmf": [
+        1.85838727447867e-06,
+        0.0004407417287886275,
+        0.021910232735666727,
+        0.22830986787900523,
+        0.4986745985385298,
+        0.22830986787900523,
+        0.021910232735666727,
+        0.0004407417287886275,
+        1.85838727447867e-06
+      ],
+      "stats": {
+        "mean_log2": 0.9999999999999999,
+        "mean_cpd_geometric": 1.9999999999999998,
+        "var_log2": 0.03999340107214518,
+        "sd_octaves": 0.19998350199990292,
+        "skewness": 1.7983661435017062e-15,
+        "excess_kurtosis": 0.004162121043979727,
+        "entropy_bits": 1.7250578953780766,
+        "max_entropy_bits": 3.169925001442312,
+        "modes_log2": [
+          1.0
+        ],
+        "modes_cpd": [
+          2.0
+        ],
+        "p_above_center": 0.25066270073073504,
+        "p_below_center": 0.25066270073073504
+      },
+      "match": {
+        "note": "uncertainty manipulation: mean matched, variance intentionally smaller"
+      }
+    },
+    "broad": {
+      "spec": {
+        "family": "gaussian",
+        "params": {
+          "loc": 1.0,
+          "scale": 0.5
+        }
+      },
+      "pmf": [
+        0.02763055063889883,
+        0.06628224528636122,
+        0.12383153680577531,
+        0.1801738229113809,
+        0.20416368871516755,
+        0.1801738229113809,
+        0.12383153680577531,
+        0.06628224528636122,
+        0.02763055063889883
+      ],
+      "stats": {
+        "mean_log2": 1.0,
+        "mean_cpd_geometric": 2.0,
+        "var_log2": 0.2142661234917643,
+        "sd_octaves": 0.462888888926667,
+        "skewness": 0.0,
+        "excess_kurtosis": -0.5148779110559545,
+        "entropy_bits": 2.9104431422147217,
+        "max_entropy_bits": 3.169925001442312,
+        "modes_log2": [
+          1.0
+        ],
+        "modes_cpd": [
+          2.0
+        ],
+        "p_above_center": 0.3979181556424163,
+        "p_below_center": 0.3979181556424163
+      },
+      "match": {
+        "target_mean_log2": 1.0,
+        "target_var_log2": 0.2142661234917643,
+        "residual_mean": 0.0,
+        "residual_var": 0.0,
+        "matched": true
+      }
+    },
+    "uniform": {
+      "spec": {
+        "family": "uniform",
+        "params": {}
+      },
+      "pmf": [
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111
+      ],
+      "stats": {
+        "mean_log2": 1.0,
+        "mean_cpd_geometric": 2.0,
+        "var_log2": 0.4166666666666667,
+        "sd_octaves": 0.6454972243679028,
+        "skewness": 0.0,
+        "excess_kurtosis": -1.23,
+        "entropy_bits": 3.169925001442312,
+        "max_entropy_bits": 3.169925001442312,
+        "modes_log2": [],
+        "modes_cpd": [],
+        "p_above_center": 0.4444444444444444,
+        "p_below_center": 0.4444444444444444
+      },
+      "match": {
+        "target_mean_log2": 1.0,
+        "target_var_log2": 0.2142661234917643,
+        "residual_mean": 0.0,
+        "residual_var": 0.2024005431749024,
+        "matched": false,
+        "note": "no free parameters on a fixed grid"
+      }
+    },
+    "right_skewed": {
+      "spec": {
+        "family": "skewnormal",
+        "params": {
+          "alpha": 6.0,
+          "loc": 0.3589910496232158,
+          "scale": 0.9132070564530447
+        }
+      },
+      "pmf": [
+        0.001956722874180939,
+        0.0542357076638228,
+        0.18743998490143202,
+        0.2092492197047507,
+        0.1801764812225414,
+        0.14321055368762486,
+        0.10560836754966067,
+        0.07225593437508647,
+        0.04586702802090028
+      ],
+      "stats": {
+        "mean_log2": 1.0,
+        "mean_cpd_geometric": 2.0,
+        "var_log2": 0.21426612349176433,
+        "sd_octaves": 0.4628888889266671,
+        "skewness": 0.40583999403297066,
+        "excess_kurtosis": -0.6576153044603386,
+        "entropy_bits": 2.837998463801077,
+        "max_entropy_bits": 3.169925001442312,
+        "modes_log2": [
+          0.75
+        ],
+        "modes_cpd": [
+          1.681792830507429
+        ],
+        "p_above_center": 0.3669418836332723,
+        "p_below_center": 0.45288163514418645
+      },
+      "match": {
+        "target_mean_log2": 1.0,
+        "target_var_log2": 0.2142661234917643,
+        "residual_mean": 0.0,
+        "residual_var": 2.7755575615628914e-17,
+        "matched": true
+      }
+    },
+    "left_skewed": {
+      "spec": {
+        "family": "skewnormal",
+        "params": {
+          "alpha": -6.0,
+          "loc": 1.6410089503767842,
+          "scale": 0.9132070564530447
+        }
+      },
+      "pmf": [
+        0.04586702802090027,
+        0.07225593437508647,
+        0.10560836754966066,
+        0.14321055368762486,
+        0.18017648122254137,
+        0.20924921970475066,
+        0.187439984901432,
+        0.054235707663822796,
+        0.0019567228741809387
+      ],
+      "stats": {
+        "mean_log2": 1.0,
+        "mean_cpd_geometric": 2.0,
+        "var_log2": 0.21426612349176433,
+        "sd_octaves": 0.4628888889266671,
+        "skewness": -0.4058399940329708,
+        "excess_kurtosis": -0.6576153044603386,
+        "entropy_bits": 2.8379984638010765,
+        "max_entropy_bits": 3.169925001442312,
+        "modes_log2": [
+          1.25
+        ],
+        "modes_cpd": [
+          2.378414230005442
+        ],
+        "p_above_center": 0.45288163514418633,
+        "p_below_center": 0.3669418836332723
+      },
+      "match": {
+        "target_mean_log2": 1.0,
+        "target_var_log2": 0.2142661234917643,
+        "residual_mean": 0.0,
+        "residual_var": 2.7755575615628914e-17,
+        "matched": true
+      }
+    },
+    "bimodal": {
+      "spec": {
+        "family": "bimodal",
+        "params": {
+          "loc": 1.0,
+          "sep": 0.8351646425539546,
+          "scale": 0.2
+        }
+      },
+      "pmf": [
+        0.0035922307862542176,
+        0.06265440861500234,
+        0.22906908363810569,
+        0.17648728326660335,
+        0.05639398738806889,
+        0.17648728326660335,
+        0.22906908363810569,
+        0.06265440861500234,
+        0.0035922307862542176
+      ],
+      "stats": {
+        "mean_log2": 1.0,
+        "mean_cpd_geometric": 2.0,
+        "var_log2": 0.21426612349176433,
+        "sd_octaves": 0.4628888889266671,
+        "skewness": -1.3877787807814457e-17,
+        "excess_kurtosis": -1.326171982385902,
+        "entropy_bits": 2.6504126559119427,
+        "max_entropy_bits": 3.169925001442312,
+        "modes_log2": [
+          0.5,
+          1.5
+        ],
+        "modes_cpd": [
+          1.4142135623730951,
+          2.8284271247461903
+        ],
+        "p_above_center": 0.47180300630596556,
+        "p_below_center": 0.4718030063059656
+      },
+      "match": {
+        "target_mean_log2": 1.0,
+        "target_var_log2": 0.2142661234917643,
+        "residual_mean": 0.0,
+        "residual_var": 2.7755575615628914e-17,
+        "matched": true
+      }
+    }
+  },
+  "status": "complete",
+  "started": "2026-11-17T20:23:37.535+00:00",
+  "resumed": false,
+  "finished": "2026-11-17T20:23:37.550+00:00",
+  "state_history": [
+    [
+      1794947017.536737,
+      "init",
+      "instructions"
+    ],
+    [
+      1794947017.5367548,
+      "instructions",
+      "block_intro"
+    ],
+    [
+      1794947017.536757,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.537191,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.537204,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.537205,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.540223,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.540231,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.540232,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.542051,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.542058,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.542059,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.543707,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.543714,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.543715,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.545323,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.5453289,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.5453298,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.547147,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.547153,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.547157,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.5489888,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.5489972,
+      "block_end",
+      "block_intro"
+    ],
+    [
+      1794947017.5489979,
+      "block_intro",
+      "trials"
+    ],
+    [
+      1794947017.5509272,
+      "trials",
+      "block_end"
+    ],
+    [
+      1794947017.5509279,
+      "block_end",
+      "done"
+    ]
+  ],
+  "trials_logged_this_run": 276
+}

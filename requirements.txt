@@ -1,0 +1,6 @@
+# core + headless + analysis (tested: Python 3.12.15, numpy 2.5.5, scipy 1.18.1, matplotlib 3.11.2, pandas 3.1.1)
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2.0
+pytest>=7

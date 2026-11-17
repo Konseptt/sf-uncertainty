@@ -1,0 +1,83 @@
+{
+  "study_seed": 20251117,
+  "monitor": {
+    "width_cm": 53.1,
+    "distance_cm": 57.0,
+    "width_px": 1920,
+    "height_px": 1080,
+    "refresh_hz": 60.0,
+    "calibrated": false,
+    "gamma": null,
+    "name": "REPLACE-WITH-MEASURED-VALUES"
+  },
+  "stimulus": {
+    "contrast": 0.5,
+    "envelope": "fixed_deg",
+    "envelope_sd_deg": 0.75,
+    "envelope_sd_cycles": 1.5,
+    "eccentricity_deg": 5.0,
+    "polar_angle_deg": 0.0,
+    "base_orientation_deg": 0.0,
+    "tilt_deg": 3.0,
+    "randomize_phase": true,
+    "duration_ms": 100.0,
+    "fixation_ms": 500.0,
+    "response_window_ms": 1500.0,
+    "iti_ms": [
+      800.0,
+      1400.0
+    ],
+    "fixation_size_deg": 0.3,
+    "background_rgb": 0.0
+  },
+  "distributions": {
+    "sf_min_cpd": 1.0,
+    "sf_max_cpd": 4.0,
+    "n_levels": 9,
+    "matching": "moment_matched",
+    "narrow_sd": 0.2,
+    "broad_sd": 0.5,
+    "skew_alpha": 6.0,
+    "bimodal_sep": 1.0,
+    "bimodal_sd": 0.2,
+    "target_sd": null,
+    "conditions": [
+      "narrow",
+      "broad",
+      "uniform",
+      "right_skewed",
+      "left_skewed",
+      "bimodal"
+    ],
+    "custom": {}
+  },
+  "design": {
+    "paradigm": "orientation",
+    "sampling": "fixed_count",
+    "trials_per_block": 108,
+    "blocks_per_condition": 1,
+    "counterbalance": "williams",
+    "practice_trials": 12,
+    "calibration_block": true,
+    "calibration_trials_per_level": 30,
+    "staircase_start_tilt": 8.0,
+    "staircase_step": 1.0,
+    "staircase_min_step": 0.125,
+    "cue": "histogram",
+    "probe_rate": 0.5,
+    "probe_sf_min_cpd": 0.5,
+    "probe_sf_max_cpd": 8.0,
+    "probe_n_levels": 9,
+    "trigger": "none",
+    "trigger_key": "5",
+    "markers": "none",
+    "serial_port": ""
+  },
+  "key_left": "left",
+  "key_right": "right",
+  "key_quit": "escape",
+  "keyboard_backend": "ptb",
+  "output_dir": "data/pilot",
+  "min_px_per_cycle": 4.0,
+  "max_frame_rate_error": 0.01
+}

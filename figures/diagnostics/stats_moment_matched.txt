@@ -1,0 +1,7 @@
+condition     mean_cpd_geo   sd_octaves entropy_bits     skewness excess_kurto p_above_cent         modes_cpd  matched
+narrow              2.0000       0.2000       1.7251       0.0000       0.0042       0.2507              2.00        -
+broad               2.0000       0.4629       2.9104       0.0000      -0.5149       0.3979              2.00     True
+uniform             2.0000       0.6455       3.1699       0.0000      -1.2300       0.4444              none    False
+right_skewed        2.0000       0.4629       2.8380       0.4058      -0.6576       0.3669              1.68     True
+left_skewed         2.0000       0.4629       2.8380      -0.4058      -0.6576       0.4529              2.38     True
+bimodal             2.0000       0.4629       2.6504      -0.0000      -1.3262       0.4718         1.41,2.83     True
