@@ -10,6 +10,7 @@ base = ExperimentConfig().to_dict()
 demo = copy.deepcopy(base)
 demo["design"].update(trials_per_block=36, practice_trials=6, calibration_block=True, calibration_trials_per_level=6)
 demo["output_dir"] = "data/demo"
+demo["keyboard_backend"] = "event"  # works on macOS without Input Monitoring permission
 
 probe = copy.deepcopy(demo)
 probe["design"]["paradigm"] = "probe"

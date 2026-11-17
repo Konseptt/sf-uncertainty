@@ -76,7 +76,7 @@
   "key_left": "left",
   "key_right": "right",
   "key_quit": "escape",
-  "keyboard_backend": "ptb",
+  "keyboard_backend": "event",
   "output_dir": "data/demo_probe",
   "min_px_per_cycle": 4.0,
   "max_frame_rate_error": 0.01
