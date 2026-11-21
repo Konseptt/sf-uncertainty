@@ -21,7 +21,7 @@ t0 = time.time()
 while time.time() - t0 < 15:
     msg.draw()
     win.flip()
-    for k in kb.getKeys():
+    for k in kb.getKeys(waitRelease=False):  # 'event' backend: names arrive as [name, t]
         print(f"got key: {k.name}", flush=True)
         msg.text = f"got: {k.name}"
 win.close()

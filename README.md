@@ -91,13 +91,7 @@ Participant display, short demo, real keypresses:
 
 Add `--autorespond` to watch it run itself with synthetic responses.
 
-**macOS keyboard caveat (unresolved).** On the development MacBook, keypresses did not reach the PsychoPy window when it was launched from an embedded terminal. Check with:
-
-```bash
-.venv-psychopy/bin/python scripts/key_test.py event   # click the window, press keys; should print "got key: ..."
-```
-
-If no keys print, launch from Terminal.app. Alternatively, grant Terminal **Input Monitoring** permission (System Settings → Privacy & Security) and use `"keyboard_backend": "ptb"`, which also gives the best RT precision.
+**Keyboard backends.** Demo configs use `"keyboard_backend": "event"`, which needs no macOS permissions; its RT is resolved to about one frame. For real RT data use `"ptb"`, which requires granting Terminal **Input Monitoring** (System Settings → Privacy & Security). Quick check: `.venv-psychopy/bin/python scripts/key_test.py event`
 
 ### Behavioral pilot
 
@@ -187,7 +181,7 @@ Rows produced by the simulated observer (headless runs, `--autorespond`, and `ex
 | Unit tests (Python 3.12 core, 3.10 PsychoPy env) | pass |
 | Headless end-to-end session + analysis | pass |
 | PsychoPy window, autorespond (MacBook, 120 Hz ProMotion, windowed) | ran; 12-frame stimuli measured 96–101 ms, dropped frames detected. This display is not suitable for data collection. |
-| Real keypresses on macOS | **failing on dev machine** (see keyboard caveat above) |
+| Keypresses into real PsychoPy window (in-process macOS key events, `tests/test_keyboard_psychopy.py`) | pass with `event` backend; `ptb` not tested (needs Input Monitoring) |
 | Researcher GUI | tested headless only |
 | Calibrated monitor, gamma, photodiode timing, keyboard latency, scanner trigger, serial markers, eye tracking | not done; requires lab hardware |
 

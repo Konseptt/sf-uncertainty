@@ -83,7 +83,7 @@ class PsychoPyBackend:
 
     def __init__(self, cfg: ExperimentConfig, windowed: bool = False, autorespond: SimulatedObserver | None = None,
                  demo: bool = False):
-        from psychopy import visual
+        from psychopy import core, event, visual
         from psychopy.hardware import keyboard
         self.cfg, self.auto = cfg, autorespond
         m, s = cfg.monitor, cfg.stimulus
@@ -112,28 +112,47 @@ class PsychoPyBackend:
         self.target = visual.GratingStim(self.win, **gabor_kwargs(cfg, **init))
         self.probe = visual.GratingStim(self.win, **gabor_kwargs(cfg, **init))
         self.text = visual.TextStim(self.win, height=m.deg2px(0.6), color=-1, wrapWidth=m.deg2px(20), units="pix")
-        self.kb = keyboard.Keyboard(backend=cfg.keyboard_backend)
+        # psychopy 2026.2.5 Keyboard(backend="event") is broken: no key-up events (so the default
+        # waitRelease=True never returns a key), names come back as [name, t] lists (keyList never
+        # matches) and rt is the poll time. Use psychopy.event directly for that backend.
+        # ponytail: event-backend RT is stamped when pyglet dispatches (once per frame, ~8-17 ms
+        # resolution); use "ptb" for real RT data.
+        self.event = event if cfg.keyboard_backend == "event" else None
+        self.kb = None if self.event else keyboard.Keyboard(backend=cfg.keyboard_backend)
+        self.rt_clock = core.Clock() if self.event else self.kb.clock
         self.markers = make_markers(cfg.design.markers, cfg.design.serial_port)
 
     def _set(self, stim, sf, ori, phase, contrast, pos_deg):
         k = gabor_kwargs(self.cfg, sf, ori, phase, contrast, pos_deg)
         stim.sf, stim.size, stim.ori, stim.phase, stim.contrast, stim.pos = k["sf"], k["size"], ori, phase, contrast, k["pos"]
 
+    def _keys(self, keyList=None) -> list[tuple[str, float]]:
+        """Key presses since last poll as (name, rt from last rt_clock reset); reported on press."""
+        if self.event:
+            return [(n, float(t)) for n, t in self.event.getKeys(keyList=keyList, timeStamped=self.rt_clock)]
+        return [(k.name, float(k.rt)) for k in self.kb.getKeys(keyList=keyList, waitRelease=False)]
+
+    def _clear_keys(self):
+        if self.event:
+            self.event.clearEvents("keyboard")
+        else:
+            self.kb.clearEvents()
+
     def _wait_key(self, seconds_if_auto=0.3):
         if self.auto:
             time.sleep(seconds_if_auto)
             return
-        self.kb.clearEvents()
+        self._clear_keys()
         while True:
-            ks = self.kb.getKeys()
+            ks = self._keys()
             if ks:
-                if ks[0].name == self.cfg.key_quit:
+                if ks[0][0] == self.cfg.key_quit:
                     raise Aborted()
                 return
             time.sleep(0.005)
 
     def _check_quit(self):
-        if self.kb.getKeys(keyList=[self.cfg.key_quit]):
+        if self._keys(keyList=[self.cfg.key_quit]):
             raise Aborted()
 
     def instructions(self, text):
@@ -209,8 +228,8 @@ class PsychoPyBackend:
                     self.probe.draw()
             self.fix.draw()
             if f == 0:
-                self.win.callOnFlip(self.kb.clock.reset)
-                self.win.callOnFlip(self.kb.clearEvents)
+                self.win.callOnFlip(self._clear_keys)
+                self.win.callOnFlip(self.rt_clock.reset)
                 self.win.callOnFlip(self.markers.send, "stim_on")
             if f == n_stim:
                 self.win.callOnFlip(self.markers.send, "stim_off")
@@ -219,11 +238,11 @@ class PsychoPyBackend:
                 onset = t
             if f == n_stim:
                 offset = t
-            for k in self.kb.getKeys(keyList=[self.cfg.key_left, self.cfg.key_right, self.cfg.key_quit]):
-                if k.name == self.cfg.key_quit:
+            for name, rt in self._keys(keyList=[self.cfg.key_left, self.cfg.key_right, self.cfg.key_quit]):
+                if name == self.cfg.key_quit:
                     raise Aborted()
                 if resp is None and plan is None:
-                    resp = (k.name, float(k.rt))
+                    resp = (name, rt)
                     self.markers.send("response")
             if plan and resp is None and plan[1] <= (f + 1) * self.fr:
                 resp = plan
