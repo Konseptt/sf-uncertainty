@@ -91,6 +91,10 @@ class PsychoPyBackend:
         self.win = visual.Window(size=size, fullscr=not windowed, units="pix", color=[s.background_rgb] * 3,
                                  colorSpace="rgb", allowGUI=False, waitBlanking=True)
         self.win.mouseVisible = False
+        try:  # macOS: window launched from a terminal does not get keyboard focus by itself
+            self.win.winHandle.activate()
+        except AttributeError:
+            pass
         hz = self.win.getActualFrameRate(nIdentical=20, nMaxFrames=240, nWarmUpFrames=20)
         self.measured_hz = hz
         if hz is None or abs(hz - m.refresh_hz) / m.refresh_hz > cfg.max_frame_rate_error:
