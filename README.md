@@ -60,16 +60,7 @@ SFs come from a 9-level log2 grid from 1 to 4 cpd, centered on 2 cpd.
 
 ![The six default conditions](figures/conditions.png)
 
-| Condition | Description |
-|---|---|
-| narrow | Gaussian peaked at 2 cpd, SD 0.2 octaves |
-| broad | Gaussian peaked at 2 cpd, SD about 0.46 octaves |
-| uniform | all SFs equally likely |
-| right_skewed | peak at 2 cpd, more probability toward higher SFs (56% of trials above 2 cpd) |
-| left_skewed | peak at 2 cpd, more probability toward lower SFs |
-| bimodal | two expected SFs, 1.41 and 2.83 cpd |
-
-By default (`"matching": "mode_matched"`) every condition keeps its peak at 2 cpd. With `"moment_matched"`, broad, skewed and bimodal instead share the same mean and variance, checked numerically. A condition that cannot be matched is reported as unmatched; uniform, for example, has no free parameter on a fixed grid.
+Narrow and broad are Gaussians with SDs of 0.2 and 0.46 octaves. Right and left skewed keep their peak at 2 cpd and put more probability above or below it (56% of right-skewed trials are above 2 cpd). Bimodal peaks at 1.41 and 2.83 cpd. This is the default `"matching": "mode_matched"`. With `"moment_matched"`, broad, skewed and bimodal instead share one mean and variance, checked numerically; uniform cannot be matched on a fixed grid and is reported as unmatched.
 
 In the probe version (`"paradigm": "probe"`), half the trials add a task-irrelevant probe in the opposite hemifield, with SFs from 0.5 to 8 cpd. The probe sequence is identical across conditions, so differences in probe responses come from expectation, not from the stimuli.
 
