@@ -115,7 +115,7 @@ class PsychoPyBackend:
         # psychopy 2026.2.5 Keyboard(backend="event") is broken: no key-up events (so the default
         # waitRelease=True never returns a key), names come back as [name, t] lists (keyList never
         # matches) and rt is the poll time. Use psychopy.event directly for that backend.
-        # ponytail: event-backend RT is stamped when pyglet dispatches (once per frame, ~8-17 ms
+        # Event-backend RT is stamped when pyglet dispatches (once per frame, ~8-17 ms
         # resolution); use "ptb" for real RT data.
         self.event = event if cfg.keyboard_backend == "event" else None
         self.kb = None if self.event else keyboard.Keyboard(backend=cfg.keyboard_backend)
