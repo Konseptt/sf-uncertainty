@@ -128,7 +128,8 @@ def _block(cfg, grid, name, cond, n, method, seed, meta, probe_seed=None) -> lis
         plev = prng.permutation(np.repeat(np.arange(len(pgrid)), fixed_counts(np.full(len(pgrid), 1 / len(pgrid)), k)))
         pori, pph = prng.uniform(0, 180, k), prng.random(k)
         pseeds = prng.integers(0, 2**31 - 1, k)
-        probe = (present, plev, pori, pph, position_deg(cfg, mirror=True), pgrid, pseeds)
+        probe = dict(present=present, level=plev, ori=pori, phase=pph, pos=position_deg(cfg, mirror=True),
+                     grid=pgrid, seed=pseeds)
     trials, run_counts, j = [], np.zeros(len(grid)), 0
     for t in range(n):
         lv = int(levels[t])
@@ -145,12 +146,12 @@ def _block(cfg, grid, name, cond, n, method, seed, meta, probe_seed=None) -> lis
                   probe_present=False, probe_sf_cpd=np.nan, probe_sf_log2=np.nan, probe_orientation_deg=np.nan,
                   probe_phase=np.nan, probe_pos_x_deg=np.nan, probe_pos_y_deg=np.nan,
                   probe_type=dsn.probe_type if dsn.paradigm == "probe" else "", probe_noise_seed=-1)
-        if probe is not None and probe[0][t]:
-            pl = int(probe[1][j])
-            pg = probe[5]
-            tr.update(probe_present=True, probe_sf_log2=float(pg[pl]), probe_sf_cpd=float(2 ** pg[pl]),
-                      probe_orientation_deg=float(probe[2][j]), probe_phase=float(probe[3][j]),
-                      probe_pos_x_deg=probe[4][0], probe_pos_y_deg=probe[4][1], probe_noise_seed=int(probe[6][j]))
+        if probe is not None and probe["present"][t]:
+            sf_log2 = float(probe["grid"][int(probe["level"][j])])
+            tr.update(probe_present=True, probe_sf_log2=sf_log2, probe_sf_cpd=float(2 ** sf_log2),
+                      probe_orientation_deg=float(probe["ori"][j]), probe_phase=float(probe["phase"][j]),
+                      probe_pos_x_deg=probe["pos"][0], probe_pos_y_deg=probe["pos"][1],
+                      probe_noise_seed=int(probe["seed"][j]))
             j += 1
         trials.append(tr)
     return trials

@@ -77,11 +77,6 @@ def noise_kwargs(cfg: ExperimentConfig, sf_cpd: float, seed: int, pos_deg: tuple
                 contrast=d.probe_contrast, pos=position_px(m, pos_deg), interpolate=False)
 
 
-def make_gabor(win, cfg: ExperimentConfig, **kw):
-    from psychopy import visual  # lazy: headless mode never imports PsychoPy
-    return visual.GratingStim(win, **gabor_kwargs(cfg, **kw))
-
-
 def render_gabor(cfg: ExperimentConfig, sf_cpd: float, ori: float = 0.0, phase: float = 0.0,
                  contrast: float | None = None, field_deg: float | None = None) -> tuple[np.ndarray, float]:
     """Numpy luminance image (-1..1 around mean gray) at the monitor's true px/deg.

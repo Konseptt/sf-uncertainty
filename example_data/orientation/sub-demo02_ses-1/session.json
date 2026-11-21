@@ -3,7 +3,7 @@
   "session": 1,
   "cb_index": 2,
   "seed": 11469451177626530727,
-  "config_hash": "3e924f5335e645b1",
+  "config_hash": "39538a85a4699691",
   "config": {
     "study_seed": 20251117,
     "monitor": {
@@ -74,9 +74,13 @@
       "probe_sf_min_cpd": 0.5,
       "probe_sf_max_cpd": 8.0,
       "probe_n_levels": 9,
+      "probe_type": "gabor",
+      "probe_noise_bandwidth_oct": 0.5,
+      "probe_contrast": 1.0,
       "trigger": "none",
       "trigger_key": "5",
       "markers": "none",
+      "lsl_stream_name": "sfu_markers",
       "serial_port": ""
     },
     "key_left": "left",
@@ -350,7 +354,7 @@
   },
   "runs": [
     {
-      "started": "2026-11-21T18:36:01.238+00:00",
+      "started": "2026-11-21T19:02:03.643+00:00",
       "status": "complete",
       "backend": "headless",
       "software": {
@@ -359,138 +363,138 @@
         "numpy": "2.5.5",
         "platform": "macOS-27.3-arm64-arm-64bit",
         "psychopy": "not installed",
-        "git_commit": "3c53c2359d08460c48a41ced0c3f3c2ad989d5dd"
+        "git_commit": "6cb209230588d83b7e283256a4fddc5bfc9fd794"
       },
       "measured_refresh_hz": null,
-      "finished": "2026-11-21T18:36:01.278+00:00",
+      "finished": "2026-11-21T19:02:03.681+00:00",
       "state_history": [
         [
-          1795286161.2634509,
+          1795287723.666846,
           "init",
           "instructions"
         ],
         [
-          1795286161.2634711,
+          1795287723.666861,
           "instructions",
           "block_intro"
         ],
         [
-          1795286161.263474,
+          1795287723.6668632,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.264023,
+          1795287723.667369,
           "trials",
           "block_end"
         ],
         [
-          1795286161.264035,
+          1795287723.667377,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.2640362,
+          1795287723.667378,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.267444,
+          1795287723.671287,
           "trials",
           "block_end"
         ],
         [
-          1795286161.26745,
+          1795287723.671293,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.2674508,
+          1795287723.671294,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.269109,
+          1795287723.6730828,
           "trials",
           "block_end"
         ],
         [
-          1795286161.269115,
+          1795287723.673087,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.269115,
+          1795287723.673088,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.270895,
+          1795287723.674942,
           "trials",
           "block_end"
         ],
         [
-          1795286161.270899,
+          1795287723.674947,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.270899,
+          1795287723.674947,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.2726872,
+          1795287723.6765141,
           "trials",
           "block_end"
         ],
         [
-          1795286161.272692,
+          1795287723.676518,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.272693,
+          1795287723.676518,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.274527,
+          1795287723.678234,
           "trials",
           "block_end"
         ],
         [
-          1795286161.274532,
+          1795287723.678238,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.274532,
+          1795287723.6782389,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.276274,
+          1795287723.679757,
           "trials",
           "block_end"
         ],
         [
-          1795286161.276278,
+          1795287723.67976,
           "block_end",
           "block_intro"
         ],
         [
-          1795286161.276278,
+          1795287723.679761,
           "block_intro",
           "trials"
         ],
         [
-          1795286161.2780428,
+          1795287723.681304,
           "trials",
           "block_end"
         ],
         [
-          1795286161.278044,
+          1795287723.6813052,
           "block_end",
           "done"
         ]

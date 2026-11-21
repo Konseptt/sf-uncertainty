@@ -53,12 +53,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11660943566777460691",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.258+00:00"
     },
     {
       "participant": "demo03",
@@ -113,12 +113,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11660943566777460691",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -173,12 +173,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11660943566777460691",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -233,12 +233,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11660943566777460691",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -293,12 +293,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11660943566777460691",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -353,12 +353,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11660943566777460691",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -413,12 +413,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.147+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -473,12 +473,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -533,12 +533,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -593,12 +593,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -653,12 +653,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -713,12 +713,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -773,12 +773,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -833,12 +833,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -893,12 +893,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -953,12 +953,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.259+00:00"
     },
     {
       "participant": "demo03",
@@ -1013,12 +1013,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1073,12 +1073,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1133,12 +1133,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1193,12 +1193,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1253,12 +1253,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1313,12 +1313,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.148+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1373,12 +1373,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1433,12 +1433,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1493,12 +1493,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1553,12 +1553,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1613,12 +1613,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1673,12 +1673,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1733,12 +1733,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1793,12 +1793,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1853,12 +1853,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1913,12 +1913,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -1973,12 +1973,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -2033,12 +2033,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.260+00:00"
     },
     {
       "participant": "demo03",
@@ -2093,12 +2093,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2153,12 +2153,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.149+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2213,12 +2213,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2273,12 +2273,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2333,12 +2333,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2393,12 +2393,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2453,12 +2453,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2513,12 +2513,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2573,12 +2573,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2633,12 +2633,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2693,12 +2693,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2753,12 +2753,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2813,12 +2813,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2873,12 +2873,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2933,12 +2933,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -2993,12 +2993,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3053,12 +3053,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3113,12 +3113,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3173,12 +3173,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3233,12 +3233,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3293,12 +3293,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.150+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3353,12 +3353,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3413,12 +3413,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.261+00:00"
     },
     {
       "participant": "demo03",
@@ -3473,12 +3473,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3533,12 +3533,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3593,12 +3593,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "6907144450574522401",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3653,12 +3653,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3713,12 +3713,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3773,12 +3773,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3833,12 +3833,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3893,12 +3893,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -3953,12 +3953,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4013,12 +4013,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4073,12 +4073,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4133,12 +4133,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4193,12 +4193,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4253,12 +4253,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4313,12 +4313,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.151+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4373,12 +4373,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.262+00:00"
     },
     {
       "participant": "demo03",
@@ -4433,12 +4433,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4493,12 +4493,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4553,12 +4553,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4613,12 +4613,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4673,12 +4673,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4733,12 +4733,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4793,12 +4793,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4853,12 +4853,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4913,12 +4913,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -4973,12 +4973,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5033,12 +5033,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5093,12 +5093,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5153,12 +5153,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5213,12 +5213,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5273,12 +5273,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5333,12 +5333,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.152+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5393,12 +5393,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5453,12 +5453,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5513,12 +5513,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5573,12 +5573,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5633,12 +5633,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.263+00:00"
     },
     {
       "participant": "demo03",
@@ -5693,12 +5693,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -5753,12 +5753,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12806985621900149816",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -5813,12 +5813,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -5873,12 +5873,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -5933,12 +5933,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -5993,12 +5993,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6053,12 +6053,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6113,12 +6113,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6173,12 +6173,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6233,12 +6233,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6293,12 +6293,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6353,12 +6353,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6413,12 +6413,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6473,12 +6473,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6533,12 +6533,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6593,12 +6593,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.153+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6653,12 +6653,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6713,12 +6713,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6773,12 +6773,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6833,12 +6833,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6893,12 +6893,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -6953,12 +6953,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -7013,12 +7013,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.264+00:00"
     },
     {
       "participant": "demo03",
@@ -7073,12 +7073,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7133,12 +7133,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7193,12 +7193,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7253,12 +7253,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7313,12 +7313,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7373,12 +7373,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7433,12 +7433,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7493,12 +7493,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7553,12 +7553,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7613,12 +7613,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7673,12 +7673,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7733,12 +7733,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7793,12 +7793,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7853,12 +7853,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.154+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7913,12 +7913,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "11992409466072354502",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -7973,12 +7973,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -8033,12 +8033,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -8093,12 +8093,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -8153,12 +8153,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -8213,12 +8213,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -8273,12 +8273,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.265+00:00"
     },
     {
       "participant": "demo03",
@@ -8333,12 +8333,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8393,12 +8393,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8453,12 +8453,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8513,12 +8513,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8573,12 +8573,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8633,12 +8633,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8693,12 +8693,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8753,12 +8753,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8813,12 +8813,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8873,12 +8873,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8933,12 +8933,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -8993,12 +8993,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9053,12 +9053,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9113,12 +9113,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.155+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9173,12 +9173,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9233,12 +9233,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9293,12 +9293,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9353,12 +9353,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9413,12 +9413,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9473,12 +9473,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9533,12 +9533,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.266+00:00"
     },
     {
       "participant": "demo03",
@@ -9593,12 +9593,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -9653,12 +9653,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -9713,12 +9713,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -9773,12 +9773,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -9833,12 +9833,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -9893,12 +9893,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -9953,12 +9953,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10013,12 +10013,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10073,12 +10073,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8601956148337931343",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10133,12 +10133,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10193,12 +10193,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10253,12 +10253,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10313,12 +10313,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10373,12 +10373,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10433,12 +10433,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.156+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10493,12 +10493,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10553,12 +10553,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10613,12 +10613,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10673,12 +10673,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10733,12 +10733,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10793,12 +10793,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.267+00:00"
     },
     {
       "participant": "demo03",
@@ -10853,12 +10853,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -10913,12 +10913,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -10973,12 +10973,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11033,12 +11033,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11093,12 +11093,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11153,12 +11153,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11213,12 +11213,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11273,12 +11273,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11333,12 +11333,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11393,12 +11393,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11453,12 +11453,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11513,12 +11513,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11573,12 +11573,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11633,12 +11633,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11693,12 +11693,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11753,12 +11753,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.157+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11813,12 +11813,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11873,12 +11873,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11933,12 +11933,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -11993,12 +11993,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -12053,12 +12053,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.268+00:00"
     },
     {
       "participant": "demo03",
@@ -12113,12 +12113,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12173,12 +12173,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12233,12 +12233,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "8171097116423096046",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12293,12 +12293,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12353,12 +12353,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12413,12 +12413,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12473,12 +12473,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12533,12 +12533,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12593,12 +12593,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12653,12 +12653,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12713,12 +12713,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12773,12 +12773,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.158+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12833,12 +12833,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12893,12 +12893,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -12953,12 +12953,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -13013,12 +13013,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -13073,12 +13073,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -13133,12 +13133,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.269+00:00"
     },
     {
       "participant": "demo03",
@@ -13193,12 +13193,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13253,12 +13253,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13313,12 +13313,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13373,12 +13373,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13433,12 +13433,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13493,12 +13493,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13553,12 +13553,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13613,12 +13613,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13673,12 +13673,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13733,12 +13733,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13793,12 +13793,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13853,12 +13853,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13913,12 +13913,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -13973,12 +13973,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -14033,12 +14033,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -14093,12 +14093,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.159+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -14153,12 +14153,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -14213,12 +14213,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.270+00:00"
     },
     {
       "participant": "demo03",
@@ -14273,12 +14273,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14333,12 +14333,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14393,12 +14393,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "12086105257540600487",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14453,12 +14453,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14513,12 +14513,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14573,12 +14573,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14633,12 +14633,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14693,12 +14693,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14753,12 +14753,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14813,12 +14813,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14873,12 +14873,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14933,12 +14933,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -14993,12 +14993,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15053,12 +15053,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15113,12 +15113,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15173,12 +15173,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15233,12 +15233,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15293,12 +15293,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.160+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15353,12 +15353,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.271+00:00"
     },
     {
       "participant": "demo03",
@@ -15413,12 +15413,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15473,12 +15473,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15533,12 +15533,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15593,12 +15593,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15653,12 +15653,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15713,12 +15713,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15773,12 +15773,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15833,12 +15833,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15893,12 +15893,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -15953,12 +15953,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16013,12 +16013,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16073,12 +16073,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16133,12 +16133,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16193,12 +16193,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16253,12 +16253,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16313,12 +16313,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16373,12 +16373,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16433,12 +16433,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16493,12 +16493,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.161+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     },
     {
       "participant": "demo03",
@@ -16553,12 +16553,12 @@
       "frame_interval_max_ms": "16.666666666666668",
       "seed": "7712100763970263526",
       "block_seed": "18145457162106641260",
-      "config_hash": "b3a0415751ca71bb",
+      "config_hash": "adb793f5fa9154b2",
       "software_version": "0.1.0",
       "backend": "headless",
       "synthetic": "True",
       "units_calibrated": "False",
-      "timestamp": "2026-11-21T18:51:37.162+00:00"
+      "timestamp": "2026-11-21T19:02:04.272+00:00"
     }
   ]
 }

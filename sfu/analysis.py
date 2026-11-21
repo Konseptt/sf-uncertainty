@@ -35,14 +35,12 @@ def load(root: str | Path) -> tuple[pd.DataFrame, dict]:
     return pd.concat(dfs, ignore_index=True), side
 
 
-def wilson(k: float, n: float, z: float = 1.96) -> tuple[float, float]:
+def wilson(k: float, n: float) -> tuple[float, float]:
+    """95% Wilson interval for k successes out of n."""
     if n == 0:
         return (np.nan, np.nan)
-    p = k / n
-    d = 1 + z**2 / n
-    c = (p + z**2 / (2 * n)) / d
-    h = z * np.sqrt(p * (1 - p) / n + z**2 / (4 * n**2)) / d
-    return (min(c - h, p), max(c + h, p))  # float rounding can put a bound inside p at p=0 or 1
+    ci = sps.binomtest(int(k), int(n)).proportion_ci(0.95, method="wilson")
+    return (ci.low, ci.high)
 
 
 def bootstrap_ci(x, fn=np.median, n_boot: int = 2000, seed: int = 0, alpha: float = 0.05) -> tuple[float, float]:

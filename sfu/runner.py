@@ -164,27 +164,22 @@ class PsychoPyBackend:
         from psychopy import visual
         cue, cond = self.cfg.design.cue, block["condition"]
         m = self.cfg.monitor
+        msg, pos = "", (0, 0)
         if block["block_type"] != "main":
             msg = {"practice": "Practice block.", "calibration": "Calibration block."}[block["block_type"]]
-            self.text.text, self.text.pos = msg + "\n\nPress any key to start.", (0, 0)
-            self.text.draw()
         elif cue == "histogram":
             p = np.asarray(block["pmf"]); w = m.deg2px(1.0); h = m.deg2px(6.0)
             for i, pi in enumerate(p):
                 x = (i - (len(p) - 1) / 2) * w * 1.1
                 visual.Rect(self.win, width=w, height=max(1, h * pi / p.max()), pos=(x, h * pi / p.max() / 2 - h / 2),
                             fillColor=-0.6, lineWidth=0, units="pix").draw()
-            self.text.text, self.text.pos = "coarse stripes                                      fine stripes\n\nPress any key to start.", (0, -h / 2 - m.deg2px(1.5))
-            self.text.draw()
+            msg, pos = "coarse stripes                                      fine stripes", (0, -h / 2 - m.deg2px(1.5))
         elif cue == "text":
-            self.text.text, self.text.pos = CUE_TEXT.get(cond, "") + "\n\nPress any key to start.", (0, 0)
-            self.text.draw()
+            msg = CUE_TEXT.get(cond, "")
         elif cue == "symbol":
-            self.text.text, self.text.pos = f"{block['symbol']}\n\nPress any key to start.", (0, 0)
-            self.text.draw()
-        else:
-            self.text.text, self.text.pos = "Press any key to start.", (0, 0)
-            self.text.draw()
+            msg = block["symbol"]
+        self.text.text, self.text.pos = (msg + "\n\n" if msg else "") + "Press any key to start.", pos
+        self.text.draw()
         self.win.flip()
         self._wait_key(0.5)
         self.text.pos = (0, 0)
