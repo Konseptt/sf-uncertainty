@@ -49,6 +49,34 @@ def gabor_kwargs(cfg: ExperimentConfig, sf_cpd: float, ori: float, phase: float,
                 contrast=contrast, pos=position_px(m, pos_deg), interpolate=True)
 
 
+def bandpass_noise(n_px: int, px_per_deg: float, center_cpd: float, bandwidth_oct: float,
+                   seed: int) -> np.ndarray:
+    """Isotropic band-pass noise, n_px x n_px, values in [-1, 1].
+
+    White Gaussian noise is filtered in the Fourier domain with a log2-Gaussian
+    pass band centred on `center_cpd` (FWHM `bandwidth_oct` octaves), then scaled
+    so its largest absolute value is 1. Drawn at 1 image pixel per screen pixel.
+    """
+    rng = np.random.default_rng(seed)
+    f = np.fft.fftfreq(n_px, d=1 / px_per_deg)  # cycles/deg
+    r = np.hypot(*np.meshgrid(f, f))
+    sigma = bandwidth_oct / (2 * math.sqrt(2 * math.log(2)))
+    with np.errstate(divide="ignore"):
+        h = np.exp(-(np.log2(r / center_cpd)) ** 2 / (2 * sigma**2))
+    h[r == 0] = 0.0
+    img = np.real(np.fft.ifft2(np.fft.fft2(rng.standard_normal((n_px, n_px))) * h))
+    return img / np.abs(img).max()
+
+
+def noise_kwargs(cfg: ExperimentConfig, sf_cpd: float, seed: int, pos_deg: tuple[float, float]) -> dict:
+    """Arguments for psychopy.visual.ImageStim showing a band-pass noise probe."""
+    m, d = cfg.monitor, cfg.design
+    n = max(8, int(round(m.deg2px(6 * envelope_sd_deg(cfg, sf_cpd)))))
+    return dict(image=bandpass_noise(n, m.px_per_deg, sf_cpd, d.probe_noise_bandwidth_oct, seed),
+                mask="gauss", maskParams={"sd": MASK_SD}, units="pix", size=(n, n),
+                contrast=d.probe_contrast, pos=position_px(m, pos_deg), interpolate=False)
+
+
 def make_gabor(win, cfg: ExperimentConfig, **kw):
     from psychopy import visual  # lazy: headless mode never imports PsychoPy
     return visual.GratingStim(win, **gabor_kwargs(cfg, **kw))

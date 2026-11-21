@@ -14,6 +14,7 @@ demo["keyboard_backend"] = "event"  # works on macOS without Input Monitoring pe
 
 probe = copy.deepcopy(demo)
 probe["design"]["paradigm"] = "probe"
+probe["design"]["probe_type"] = "noise"
 probe["output_dir"] = "data/demo_probe"
 
 pilot = copy.deepcopy(base)

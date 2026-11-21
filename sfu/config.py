@@ -64,6 +64,9 @@ class DesignConfig:
     probe_sf_min_cpd: float = 0.5         # probes should span beyond the expected range to estimate tuning
     probe_sf_max_cpd: float = 8.0
     probe_n_levels: int = 9
+    probe_type: Literal["gabor", "noise"] = "gabor"  # noise = band-pass filtered noise, as in Ramirez et al. (2025)
+    probe_noise_bandwidth_oct: float = 0.5  # FWHM of the log2-Gaussian pass band; check against the lab's filter width
+    probe_contrast: float = 1.0             # Ramirez et al. used 100% Michelson contrast
     trigger: Literal["none", "keyboard", "serial"] = "none"
     trigger_key: str = "5"
     markers: Literal["none", "log", "serial"] = "none"
@@ -101,6 +104,7 @@ class ExperimentConfig:
             err.append("trials_per_block too small for fixed_count balancing (< 2*n_levels)")
         if not 0 <= g.probe_rate <= 1: err.append("probe_rate in [0, 1]")
         if not 0 < g.probe_sf_min_cpd < g.probe_sf_max_cpd or g.probe_n_levels < 2: err.append("bad probe SF range")
+        if g.probe_noise_bandwidth_oct <= 0 or not 0 < g.probe_contrast <= 1: err.append("bad probe noise bandwidth or contrast")
         if g.trigger == "serial" or g.markers == "serial":
             if not g.serial_port: err.append("serial trigger/markers need design.serial_port")
         if self.key_left == self.key_right: err.append("response keys must differ")

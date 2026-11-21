@@ -305,3 +305,26 @@ def test_gui_run_launches_runner_with_exported_config(tmp_path, monkeypatch):
     assert cmd[cmd.index("--participant") + 1] == "R07" and "--demo" in cmd
     g.boxes["trials/block"].set_val("abc")
     assert g.run() is None and len(calls) == 1
+
+
+def test_bandpass_noise_peaks_at_center_sf_and_is_reproducible():
+    from sfu.stimulus import bandpass_noise
+    ppd, n = 36.0, 256
+    f = np.fft.fftfreq(n, d=1 / ppd)
+    r = np.hypot(*np.meshgrid(f, f))
+    for center in (0.5, 1.0, 2.0, 4.0, 8.0):
+        img = bandpass_noise(n, ppd, center, 0.5, seed=3)
+        assert np.abs(img).max() == pytest.approx(1.0)
+        power = np.abs(np.fft.fft2(img)) ** 2
+        mean_log2 = np.sum(power * np.log2(np.where(r > 0, r, 1))) / power.sum()
+        assert abs(mean_log2 - np.log2(center)) < 0.15, center
+        assert np.array_equal(img, bandpass_noise(n, ppd, center, 0.5, seed=3))
+    assert not np.array_equal(bandpass_noise(n, ppd, 2.0, 0.5, 1), bandpass_noise(n, ppd, 2.0, 0.5, 2))
+
+
+def test_noise_probe_seeds_identical_across_conditions():
+    s = build_session(small_cfg(paradigm="probe", probe_type="noise"), "P01", 1, 0)
+    streams = [[(t["probe_present"], t["probe_sf_cpd"], t["probe_noise_seed"], t["probe_type"]) for t in b["trials"]]
+               for b in s["blocks"] if b["block_type"] == "main"]
+    assert all(x == streams[0] for x in streams)
+    assert any(seed >= 0 for _, _, seed, _ in streams[0]) and streams[0][0][3] == "noise"

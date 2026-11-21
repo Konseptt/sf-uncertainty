@@ -95,7 +95,7 @@ I have not done a systematic search yet, so I am not claiming the question is ne
 1. Mode matching is the default. Whether a moment-matched comparison is also needed is still open.
 2. Variance, entropy, or both as the measure of uncertainty.
 3. Explicit histogram cue or a prior learned from exposure.
-4. Probe SF range and number of levels. In simulation with 13 probe levels and noise SD 0.1, BIC selected a non-Gaussian model for about 48% of Gaussian-generated curves, and a bimodal profile with a shallow dip was not recovered. Well-separated bimodal profiles were recovered every time. Testing H2 will need more probe levels, more data per voxel, or pooling.
+4. Probe stimulus. Noise probes follow Ramirez et al. (2025), but the pass band width (they report a filter width of 0.2) and the aperture (theirs was a wedge out to 9.18°, here a 0.75° SD Gaussian, so low-SF probes show few cycles) still need to be matched to the lab's setup. Probe SF range and number of levels. In simulation with 13 probe levels and noise SD 0.1, BIC selected a non-Gaussian model for about 48% of Gaussian-generated curves, and a bimodal profile with a shallow dip was not recovered. Well-separated bimodal profiles were recovered every time. Testing H2 will need more probe levels, more data per voxel, or pooling.
 5. Blocked or interleaved design, block length, and number of sessions.
 6. Whether to keep the orientation task, or use a task orthogonal to SF in the scanner.
 7. Per-SF contrast normalization as an alternative to tilt calibration.

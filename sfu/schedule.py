@@ -127,7 +127,8 @@ def _block(cfg, grid, name, cond, n, method, seed, meta, probe_seed=None) -> lis
         pgrid = make_grid(dsn.probe_sf_min_cpd, dsn.probe_sf_max_cpd, dsn.probe_n_levels)
         plev = prng.permutation(np.repeat(np.arange(len(pgrid)), fixed_counts(np.full(len(pgrid), 1 / len(pgrid)), k)))
         pori, pph = prng.uniform(0, 180, k), prng.random(k)
-        probe = (present, plev, pori, pph, position_deg(cfg, mirror=True), pgrid)
+        pseeds = prng.integers(0, 2**31 - 1, k)
+        probe = (present, plev, pori, pph, position_deg(cfg, mirror=True), pgrid, pseeds)
     trials, run_counts, j = [], np.zeros(len(grid)), 0
     for t in range(n):
         lv = int(levels[t])
@@ -142,13 +143,14 @@ def _block(cfg, grid, name, cond, n, method, seed, meta, probe_seed=None) -> lis
                   p_expected=float(p[lv]), p_observed_block=float(realized[lv]),
                   p_observed_running=float(run_counts[lv] / (t + 1)), block_seed=int(seed),
                   probe_present=False, probe_sf_cpd=np.nan, probe_sf_log2=np.nan, probe_orientation_deg=np.nan,
-                  probe_phase=np.nan, probe_pos_x_deg=np.nan, probe_pos_y_deg=np.nan)
+                  probe_phase=np.nan, probe_pos_x_deg=np.nan, probe_pos_y_deg=np.nan,
+                  probe_type=dsn.probe_type if dsn.paradigm == "probe" else "", probe_noise_seed=-1)
         if probe is not None and probe[0][t]:
             pl = int(probe[1][j])
             pg = probe[5]
             tr.update(probe_present=True, probe_sf_log2=float(pg[pl]), probe_sf_cpd=float(2 ** pg[pl]),
                       probe_orientation_deg=float(probe[2][j]), probe_phase=float(probe[3][j]),
-                      probe_pos_x_deg=probe[4][0], probe_pos_y_deg=probe[4][1])
+                      probe_pos_x_deg=probe[4][0], probe_pos_y_deg=probe[4][1], probe_noise_seed=int(probe[6][j]))
             j += 1
         trials.append(tr)
     return trials

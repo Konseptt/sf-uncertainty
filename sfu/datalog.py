@@ -23,7 +23,7 @@ COLUMNS = [
     "envelope_sd_deg", "pos_x_deg", "pos_y_deg", "ecc_deg",
     "p_expected", "p_observed_block", "p_observed_running",
     "probe_present", "probe_sf_cpd", "probe_sf_log2", "probe_orientation_deg", "probe_phase",
-    "probe_pos_x_deg", "probe_pos_y_deg",
+    "probe_pos_x_deg", "probe_pos_y_deg", "probe_type", "probe_noise_seed",
     "iti_ms", "stim_frames", "onset_s", "offset_s", "duration_measured_ms",
     "response", "correct_key", "accuracy", "rt_s", "dropped_frames", "stim_dropped_frames", "frame_interval_max_ms",
     "seed", "block_seed", "config_hash", "software_version", "backend", "synthetic", "units_calibrated",

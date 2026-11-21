@@ -28,7 +28,7 @@ from .hardware import make_markers, wait_keyboard_trigger
 from .responses import SimulatedObserver
 from .schedule import build_session
 from .state import Aborted, State, StateMachine
-from .stimulus import gabor_kwargs
+from .stimulus import gabor_kwargs, noise_kwargs
 
 log = logging.getLogger("sfu")
 
@@ -211,8 +211,14 @@ class PsychoPyBackend:
         ori = s.base_orientation_deg + trial["tilt_dir"] * tilt
         self._set(self.target, trial["sf_cpd"], ori, trial["phase"], trial["contrast"], (trial["pos_x_deg"], trial["pos_y_deg"]))
         if trial["probe_present"]:
-            self._set(self.probe, trial["probe_sf_cpd"], trial["probe_orientation_deg"], trial["probe_phase"],
-                      trial["contrast"], (trial["probe_pos_x_deg"], trial["probe_pos_y_deg"]))
+            ppos = (trial["probe_pos_x_deg"], trial["probe_pos_y_deg"])
+            if self.cfg.design.probe_type == "noise":
+                from psychopy import visual
+                self.probe = visual.ImageStim(self.win, **noise_kwargs(self.cfg, trial["probe_sf_cpd"],
+                                                                       trial["probe_noise_seed"], ppos))
+            else:
+                self._set(self.probe, trial["probe_sf_cpd"], trial["probe_orientation_deg"], trial["probe_phase"],
+                          self.cfg.design.probe_contrast, ppos)
         plan = self.auto.respond(trial, tilt, (self.cfg.key_left, self.cfg.key_right)) if self.auto else None
         self.win.frameIntervals = []
         self.markers.send("fixation")
