@@ -34,7 +34,7 @@ class DistributionConfig:
     sf_min_cpd: float = 1.0
     sf_max_cpd: float = 4.0
     n_levels: int = 9
-    matching: Literal["mode_matched", "moment_matched"] = "moment_matched"
+    matching: Literal["mode_matched", "moment_matched"] = "mode_matched"
     narrow_sd: float = 0.2                # octaves
     broad_sd: float = 0.5
     skew_alpha: float = 6.0

@@ -60,8 +60,8 @@ class ResearcherGUI:
         fig.canvas.manager and fig.canvas.manager.set_window_title("SF uncertainty - researcher interface")
         x0 = 0.015
         fig.text(x0, 0.965, "Distributions", weight="bold")
-        self.r_match = RadioButtons(fig.add_axes([x0, 0.875, 0.12, 0.08]), ["moment_matched", "mode_matched"],
-                                    active=["moment_matched", "mode_matched"].index(cfg.distributions.matching))
+        self.r_match = RadioButtons(fig.add_axes([x0, 0.875, 0.12, 0.08]), ["mode_matched", "moment_matched"],
+                                    active=["mode_matched", "moment_matched"].index(cfg.distributions.matching))
         self.r_samp = RadioButtons(fig.add_axes([x0 + 0.125, 0.875, 0.10, 0.08]), ["fixed_count", "probability"],
                                    active=["fixed_count", "probability"].index(cfg.design.sampling))
         self.sliders = {}

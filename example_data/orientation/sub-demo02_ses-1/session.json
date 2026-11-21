@@ -3,7 +3,7 @@
   "session": 1,
   "cb_index": 2,
   "seed": 11469451177626530727,
-  "config_hash": "fe7dfaf97c3f3455",
+  "config_hash": "3e924f5335e645b1",
   "config": {
     "study_seed": 20251117,
     "monitor": {
@@ -40,7 +40,7 @@
       "sf_min_cpd": 1.0,
       "sf_max_cpd": 4.0,
       "n_levels": 9,
-      "matching": "moment_matched",
+      "matching": "mode_matched",
       "narrow_sd": 0.2,
       "broad_sd": 0.5,
       "skew_alpha": 6.0,
@@ -82,7 +82,7 @@
     "key_left": "left",
     "key_right": "right",
     "key_quit": "escape",
-    "keyboard_backend": "ptb",
+    "keyboard_backend": "event",
     "output_dir": "data/demo",
     "min_px_per_cycle": 4.0,
     "max_frame_rate_error": 0.01
@@ -93,7 +93,7 @@
     "numpy": "2.5.5",
     "platform": "macOS-27.3-arm64-arm-64bit",
     "psychopy": "not installed",
-    "git_commit": "none"
+    "git_commit": "be15d6d5e4e61037d2dd664c871f881cf5705eb5"
   },
   "backend": "headless",
   "measured_refresh_hz": null,
@@ -162,9 +162,7 @@
         "p_above_center": 0.25066270073073504,
         "p_below_center": 0.25066270073073504
       },
-      "match": {
-        "note": "uncertainty manipulation: mean matched, variance intentionally smaller"
-      }
+      "match": null
     },
     "broad": {
       "spec": {
@@ -203,13 +201,7 @@
         "p_above_center": 0.3979181556424163,
         "p_below_center": 0.3979181556424163
       },
-      "match": {
-        "target_mean_log2": 1.0,
-        "target_var_log2": 0.2142661234917643,
-        "residual_mean": 0.0,
-        "residual_var": 0.0,
-        "matched": true
-      }
+      "match": null
     },
     "uniform": {
       "spec": {
@@ -241,135 +233,116 @@
         "p_above_center": 0.4444444444444444,
         "p_below_center": 0.4444444444444444
       },
-      "match": {
-        "target_mean_log2": 1.0,
-        "target_var_log2": 0.2142661234917643,
-        "residual_mean": 0.0,
-        "residual_var": 0.2024005431749024,
-        "matched": false,
-        "note": "no free parameters on a fixed grid"
-      }
+      "match": null
     },
     "right_skewed": {
       "spec": {
         "family": "skewnormal",
         "params": {
           "alpha": 6.0,
-          "loc": 0.3589910496232158,
-          "scale": 0.9132070564530447
+          "loc": 0.8335142671321047,
+          "scale": 0.5
         }
       },
       "pmf": [
-        0.001956722874180939,
-        0.0542357076638228,
-        0.18743998490143202,
-        0.2092492197047507,
-        0.1801764812225414,
-        0.14321055368762486,
-        0.10560836754966067,
-        0.07225593437508647,
-        0.04586702802090028
+        7.580104323786877e-25,
+        2.6023782638722926e-13,
+        1.0250975340945817e-05,
+        0.06362938071798577,
+        0.3772059690445499,
+        0.2884259799031443,
+        0.16783024821146855,
+        0.07605580205235929,
+        0.02684236909489091
       ],
       "stats": {
-        "mean_log2": 1.0,
-        "mean_cpd_geometric": 2.0,
-        "var_log2": 0.21426612349176433,
-        "sd_octaves": 0.4628888889266671,
-        "skewness": 0.40583999403297066,
-        "excess_kurtosis": -0.6576153044603386,
-        "entropy_bits": 2.837998463801077,
+        "mean_log2": 1.2239933690483185,
+        "mean_cpd_geometric": 2.335924052767952,
+        "var_log2": 0.08341431320739612,
+        "sd_octaves": 0.28881536179260986,
+        "skewness": 0.6694179487482741,
+        "excess_kurtosis": -0.02578911571961129,
+        "entropy_bits": 2.155903569380895,
         "max_entropy_bits": 3.169925001442312,
         "modes_log2": [
-          0.75
+          1.0
         ],
         "modes_cpd": [
-          1.681792830507429
+          2.0
         ],
-        "p_above_center": 0.3669418836332723,
-        "p_below_center": 0.45288163514418645
+        "p_above_center": 0.559154399261863,
+        "p_below_center": 0.06363963169358695
       },
-      "match": {
-        "target_mean_log2": 1.0,
-        "target_var_log2": 0.2142661234917643,
-        "residual_mean": 0.0,
-        "residual_var": 2.7755575615628914e-17,
-        "matched": true
-      }
+      "match": null
     },
     "left_skewed": {
       "spec": {
         "family": "skewnormal",
         "params": {
           "alpha": -6.0,
-          "loc": 1.6410089503767842,
-          "scale": 0.9132070564530447
+          "loc": 1.1664857328678395,
+          "scale": 0.5
         }
       },
       "pmf": [
-        0.04586702802090027,
-        0.07225593437508647,
-        0.10560836754966066,
-        0.14321055368762486,
-        0.18017648122254137,
-        0.20924921970475066,
-        0.187439984901432,
-        0.054235707663822796,
-        0.0019567228741809387
+        0.026842369094897685,
+        0.07605580205237422,
+        0.16783024821149214,
+        0.28842597990316876,
+        0.37720596904454684,
+        0.06362938071791911,
+        1.0250975340916022e-05,
+        2.6023782638595174e-13,
+        7.58010432373412e-25
       ],
       "stats": {
-        "mean_log2": 1.0,
-        "mean_cpd_geometric": 2.0,
-        "var_log2": 0.21426612349176433,
-        "sd_octaves": 0.4628888889266671,
-        "skewness": -0.4058399940329708,
-        "excess_kurtosis": -0.6576153044603386,
-        "entropy_bits": 2.8379984638010765,
+        "mean_log2": 0.7760066309516287,
+        "mean_cpd_geometric": 1.7123844395797265,
+        "var_log2": 0.08341431320739101,
+        "sd_octaves": 0.288815361792601,
+        "skewness": -0.669417948748326,
+        "excess_kurtosis": -0.02578911571968323,
+        "entropy_bits": 2.15590356938082,
         "max_entropy_bits": 3.169925001442312,
         "modes_log2": [
-          1.25
+          1.0
         ],
         "modes_cpd": [
-          2.378414230005442
+          2.0
         ],
-        "p_above_center": 0.45288163514418633,
-        "p_below_center": 0.3669418836332723
+        "p_above_center": 0.06363963169352027,
+        "p_below_center": 0.5591543992619328
       },
-      "match": {
-        "target_mean_log2": 1.0,
-        "target_var_log2": 0.2142661234917643,
-        "residual_mean": 0.0,
-        "residual_var": 2.7755575615628914e-17,
-        "matched": true
-      }
+      "match": null
     },
     "bimodal": {
       "spec": {
         "family": "bimodal",
         "params": {
           "loc": 1.0,
-          "sep": 0.8351646425539546,
+          "sep": 1.0,
           "scale": 0.2
         }
       },
       "pmf": [
-        0.0035922307862542176,
-        0.06265440861500234,
-        0.22906908363810569,
-        0.17648728326660335,
-        0.05639398738806889,
-        0.17648728326660335,
-        0.22906908363810569,
-        0.06265440861500234,
-        0.0035922307862542176
+        0.010959967232749782,
+        0.11420548193269056,
+        0.24944863404749018,
+        0.1144259495544719,
+        0.02191993446519514,
+        0.1144259495544719,
+        0.24944863404749018,
+        0.11420548193269056,
+        0.010959967232749782
       ],
       "stats": {
         "mean_log2": 1.0,
         "mean_cpd_geometric": 2.0,
-        "var_log2": 0.21426612349176433,
-        "sd_octaves": 0.4628888889266671,
-        "skewness": -1.3877787807814457e-17,
-        "excess_kurtosis": -1.326171982385902,
-        "entropy_bits": 2.6504126559119427,
+        "var_log2": 0.28942866235783055,
+        "sd_octaves": 0.537985745496877,
+        "skewness": 4.163336342344337e-17,
+        "excess_kurtosis": -1.492691837582381,
+        "entropy_bits": 2.693663449579201,
         "max_entropy_bits": 3.169925001442312,
         "modes_log2": [
           0.5,
@@ -379,150 +352,144 @@
           1.4142135623730951,
           2.8284271247461903
         ],
-        "p_above_center": 0.47180300630596556,
-        "p_below_center": 0.4718030063059656
+        "p_above_center": 0.48904003276740243,
+        "p_below_center": 0.48904003276740243
       },
-      "match": {
-        "target_mean_log2": 1.0,
-        "target_var_log2": 0.2142661234917643,
-        "residual_mean": 0.0,
-        "residual_var": 2.7755575615628914e-17,
-        "matched": true
-      }
+      "match": null
     }
   },
   "status": "complete",
-  "started": "2026-11-17T20:23:38.858+00:00",
+  "started": "2026-11-21T18:29:55.092+00:00",
   "resumed": false,
-  "finished": "2026-11-17T20:23:38.874+00:00",
+  "finished": "2026-11-21T18:29:55.107+00:00",
   "state_history": [
     [
-      1794947018.8592699,
+      1795285795.093357,
       "init",
       "instructions"
     ],
     [
-      1794947018.859287,
+      1795285795.093369,
       "instructions",
       "block_intro"
     ],
     [
-      1794947018.8592892,
+      1795285795.0933702,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.859964,
+      1795285795.093908,
       "trials",
       "block_end"
     ],
     [
-      1794947018.859977,
+      1795285795.093913,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.859978,
+      1795285795.093914,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.863531,
+      1795285795.097017,
       "trials",
       "block_end"
     ],
     [
-      1794947018.863538,
+      1795285795.097022,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.863539,
+      1795285795.097024,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.865257,
+      1795285795.098745,
       "trials",
       "block_end"
     ],
     [
-      1794947018.865263,
+      1795285795.098749,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.865263,
+      1795285795.0987499,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.8670778,
+      1795285795.100459,
       "trials",
       "block_end"
     ],
     [
-      1794947018.867084,
+      1795285795.1004622,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.867085,
+      1795285795.1004622,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.8687549,
+      1795285795.102103,
       "trials",
       "block_end"
     ],
     [
-      1794947018.868761,
+      1795285795.1021051,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.868761,
+      1795285795.102106,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.870668,
+      1795285795.1039429,
       "trials",
       "block_end"
     ],
     [
-      1794947018.870673,
+      1795285795.103946,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.870674,
+      1795285795.103946,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.8724082,
+      1795285795.105909,
       "trials",
       "block_end"
     ],
     [
-      1794947018.8724139,
+      1795285795.105914,
       "block_end",
       "block_intro"
     ],
     [
-      1794947018.8724139,
+      1795285795.105914,
       "block_intro",
       "trials"
     ],
     [
-      1794947018.874155,
+      1795285795.107841,
       "trials",
       "block_end"
     ],
     [
-      1794947018.874157,
+      1795285795.107842,
       "block_end",
       "done"
     ]

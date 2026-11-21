@@ -34,7 +34,7 @@
     "sf_min_cpd": 1.0,
     "sf_max_cpd": 4.0,
     "n_levels": 9,
-    "matching": "moment_matched",
+    "matching": "mode_matched",
     "narrow_sd": 0.2,
     "broad_sd": 0.5,
     "skew_alpha": 6.0,

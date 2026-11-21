@@ -14,7 +14,7 @@ I want to ask the same question in feature space. When the upcoming SF is uncert
 
 All distributions are defined on a log2 grid from 1 to 4 cpd (9 levels, 0.25 octave steps, centered on 2 cpd).
 
-| Condition | Manipulates | Default (moment-matched) |
+| Condition | Manipulates | Moment-matched version |
 |---|---|---|
 | narrow | certainty | Gaussian, SD 0.20 octaves, mean 2 cpd |
 | broad | uncertainty | Gaussian, SD 0.463 octaves; reference variance |
@@ -23,14 +23,14 @@ All distributions are defined on a log2 grid from 1 to 4 cpd (9 levels, 0.25 oct
 | left_skewed | asymmetry toward low SF | mirror image, skewness −0.41 |
 | bimodal | two expected SFs | Gaussian mixture, mean 2 cpd, SD 0.463, modes 1.41 and 2.83 cpd |
 
-Means and variances are matched to within 1e-6. Entropy, skewness and kurtosis are reported but not matched, so conditions with equal variance still differ in entropy (bimodal 2.65 bits vs. broad 2.91 bits).
+In the moment-matched version, means and variances are matched to within 1e-6. Entropy, skewness and kurtosis are reported but not matched, so conditions with equal variance still differ in entropy (bimodal 2.65 bits vs. broad 2.91 bits).
 
 The two matching schemes treat skew differently.
 
 - **Mode-matched**, peak at 2 cpd: the right-skewed condition puts 56% of trials above 2 cpd and the left-skewed condition 6%. This fits the idea of a distribution with a peak at 2 cpd and somewhat more probability at higher SFs.
 - **Mean-matched**: the right-skewed condition peaks at 1.68 cpd and puts only 37% of trials above 2 cpd.
 
-Which scheme to use for the main comparison is still open.
+I use mode matching by default because it matches the design discussed on 17 Nov 2026: a peak at 2 cpd with probability biased toward higher SFs. Moment matching is kept as an option for separating shape from mean and variance.
 
 ## Hypotheses
 
@@ -88,7 +88,7 @@ I have not done a systematic search yet, so I am not claiming the question is ne
 
 ## Open decisions
 
-1. Mean-matched or mode-matched skew for the main comparison.
+1. Mode matching is the default. Whether a moment-matched comparison is also needed is still open.
 2. Variance, entropy, or both as the measure of uncertainty.
 3. Explicit histogram cue or a prior learned from exposure.
 4. Probe SF range and number of levels. In simulation with 13 probe levels and noise SD 0.1, BIC selected a non-Gaussian model for about 48% of Gaussian-generated curves, and a bimodal profile with a shallow dip was not recovered. Well-separated bimodal profiles were recovered every time. Testing H2 will need more probe levels, more data per voxel, or pooling.

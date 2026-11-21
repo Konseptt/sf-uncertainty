@@ -43,7 +43,7 @@ def wilson(k: float, n: float, z: float = 1.96) -> tuple[float, float]:
     d = 1 + z**2 / n
     c = (p + z**2 / (2 * n)) / d
     h = z * np.sqrt(p * (1 - p) / n + z**2 / (4 * n**2)) / d
-    return (c - h, c + h)
+    return (min(c - h, p), max(c + h, p))  # float rounding can put a bound inside p at p=0 or 1
 
 
 def bootstrap_ci(x, fn=np.median, n_boot: int = 2000, seed: int = 0, alpha: float = 0.05) -> tuple[float, float]:

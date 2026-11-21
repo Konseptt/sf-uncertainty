@@ -214,7 +214,7 @@ def test_analysis_validation_matches_fixed_counts(tmp_path):
     df, side = load(tmp_path)
     v = validate_distributions(df, side)
     assert len(v) == 6 and (v.max_abs_prob_dev <= 1 / 36 + 1e-12).all()
-    assert np.allclose(v[v.condition != "uniform"].mean_realized, 1.0, atol=0.05)
+    assert np.allclose(v.mean_realized, v.mean_intended, atol=0.05)  # whole-trial rounding at 36 trials/block
 
 
 # -- simulation ---------------------------------------------------------------------
@@ -238,3 +238,10 @@ def test_gui_refuses_export_on_invalid_input(tmp_path, monkeypatch):
         g.boxes[lab].set_val(bad)
         assert g.export() is None and g.msg.get_text().startswith("ERROR"), lab
         g.boxes[lab].set_val(old)
+
+
+def test_wilson_interval_contains_estimate_at_extremes():
+    from sfu.analysis import wilson
+    for k, n in ((0, 1), (1, 1), (0, 7), (7, 7), (36, 36), (3, 7)):
+        lo, hi = wilson(k, n)
+        assert 0 <= lo <= k / n <= hi <= 1, (k, n, lo, hi)
