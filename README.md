@@ -71,7 +71,11 @@ SFs come from a 9-level log2 grid from 1 to 4 cpd, centered on 2 cpd.
 
 By default (`"matching": "mode_matched"`) every condition keeps its peak at 2 cpd. With `"moment_matched"`, broad, skewed and bimodal instead share the same mean and variance, checked numerically. A condition that cannot be matched is reported as unmatched; uniform, for example, has no free parameter on a fixed grid.
 
-In the probe version (`"paradigm": "probe"`), half the trials also show a task-irrelevant probe in the opposite hemifield, with SFs from 0.5 to 8 cpd. `"probe_type": "noise"` (used by `configs/demo_probe.json`) makes the probe isotropic band-pass filtered noise, the stimulus Ramirez et al. (2025) used to map pSFT; `"gabor"` uses a Gabor. Probes are shown at `probe_contrast` (default 100%), and the pass band width is `probe_noise_bandwidth_oct`. The probe sequence, including each noise sample, is identical across conditions, so any difference in probe responses comes from the expectation context rather than from the stimuli.
+In the probe version (`"paradigm": "probe"`), half the trials add a task-irrelevant probe in the opposite hemifield, with SFs from 0.5 to 8 cpd. The probe sequence is identical across conditions, so differences in probe responses come from expectation, not from the stimuli.
+
+![Screen layout in the probe version](figures/screen_layout.png)
+
+`"probe_type": "noise"` (the default in `configs/demo_probe.json`) uses band-pass filtered noise, as Ramirez et al. (2025) did to map pSFT; `"gabor"` uses a Gabor. Contrast is `probe_contrast` (default 100%) and the pass band width is `probe_noise_bandwidth_oct`.
 
 ![Noise probes](figures/noise_probes.png)
 

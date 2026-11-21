@@ -58,3 +58,25 @@ for ax, (name, c) in zip(axs, conds.items()):
     ax.set_xlabel("SF (cpd)", fontsize=8)
 axs[0].set_ylabel("probability")
 fig.tight_layout(); fig.savefig("figures/conditions.png", dpi=120); plt.close(fig)
+
+# screen layout in the probe version, at the demo monitor's pixels per degree
+from sfu import config as cfgmod
+from sfu.stimulus import noise_kwargs, render_gabor
+cfg = cfgmod.load("configs/demo_probe.json")
+ppd, w, h = cfg.monitor.px_per_deg, 16.0, 6.0
+screen = np.zeros((int(h * ppd), int(w * ppd)))
+def paste(img, x_deg):
+    n = img.shape[0]; cy, cx = screen.shape[0] // 2, int(screen.shape[1] / 2 + x_deg * ppd)
+    screen[cy - n // 2: cy - n // 2 + n, cx - n // 2: cx - n // 2 + n] += img
+paste(render_gabor(cfg, 2.0, ori=8, phase=0.25, contrast=0.5)[0], 5)
+nk = noise_kwargs(cfg, 1.0, seed=1, pos_deg=(0, 0)); n = nk["image"].shape[0]
+yy, xx = np.mgrid[:n, :n] - (n - 1) / 2
+paste(nk["image"] * np.exp(-(xx**2 + yy**2) / (2 * (n / 6) ** 2)), -5)
+fig, ax = plt.subplots(figsize=(7, 3.2))
+ax.imshow(screen, cmap="gray", vmin=-1, vmax=1, extent=[-w / 2, w / 2, -h / 2, h / 2])
+ax.plot([-0.15, 0.15], [0, 0], "k", lw=1.5); ax.plot([0, 0], [-0.15, 0.15], "k", lw=1.5)
+for x, txt in ((5, "target: judge tilt"), (-5, "probe: ignore")):
+    ax.text(x, -2.7, txt, ha="center", fontsize=9)
+ax.text(0, 0.5, "fixation", ha="center", fontsize=8)
+ax.set_xlabel("degrees"); ax.set_yticks([])
+fig.tight_layout(); fig.savefig("figures/screen_layout.png", dpi=120); plt.close(fig)
