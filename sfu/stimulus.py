@@ -31,8 +31,13 @@ def position_deg(cfg: ExperimentConfig, mirror: bool = False) -> tuple[float, fl
 
 
 def position_px(m: Monitor, pos_deg: tuple[float, float]) -> tuple[float, float]:
-    """Exact per-axis tangent projection (accurate on horizontal/vertical meridians)."""
-    return (m.ecc2px(pos_deg[0]), m.ecc2px(pos_deg[1]))
+    """Screen position of a point at eccentricity hypot(x, y) along polar angle atan2(y, x).
+    Radial distance is d*tan(ecc), so the result is exact at any polar angle."""
+    ecc = math.hypot(*pos_deg)
+    if ecc == 0:
+        return (0.0, 0.0)
+    k = m.ecc2px(ecc) / ecc
+    return (pos_deg[0] * k, pos_deg[1] * k)
 
 
 def gabor_kwargs(cfg: ExperimentConfig, sf_cpd: float, ori: float, phase: float,

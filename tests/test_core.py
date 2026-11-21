@@ -245,3 +245,17 @@ def test_wilson_interval_contains_estimate_at_extremes():
     for k, n in ((0, 1), (1, 1), (0, 7), (7, 7), (36, 36), (3, 7)):
         lo, hi = wilson(k, n)
         assert 0 <= lo <= k / n <= hi <= 1, (k, n, lo, hi)
+
+
+def test_position_exact_at_any_polar_angle():
+    import math
+    from sfu.stimulus import position_deg, position_px
+    cfg = small_cfg()
+    m = cfg.monitor
+    for angle in (0, 45, 90, 135, 200):
+        c = copy.deepcopy(cfg)
+        c.stimulus.polar_angle_deg = angle
+        x, y = position_px(m, position_deg(c))
+        assert math.hypot(x, y) == pytest.approx(m.ecc2px(c.stimulus.eccentricity_deg))
+        assert math.degrees(math.atan2(y, x)) % 360 == pytest.approx(angle % 360)
+    assert position_px(m, (0.0, 0.0)) == (0.0, 0.0)
