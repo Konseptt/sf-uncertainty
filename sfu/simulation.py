@@ -1,14 +1,11 @@
-"""SYNTHETIC population-SF-tuning sandbox: tuning-profile scenarios, Gaussian
-and flexible (asymmetric, bimodal, B-spline) fits, parameter and model recovery.
+"""Simulated population SF tuning: tuning scenarios, Gaussian and flexible fits
+(split Gaussian, bimodal, B-spline), and parameter and model recovery.
 
-Everything here is simulated. It answers "could this design + model tell these
-tuning hypotheses apart at this noise level?", not "what does cortex do".
-Real voxel-wise pSFT estimation (HRF convolution, fMRI time series) belongs in
-the pSF-Toolbox (MATLAB, github.com/luisdramirez/pSF-Toolbox); the response
-model here is a static noisy tuning curve sampled at probe SFs.
+This checks whether the design and models can tell tuning hypotheses apart at a
+given noise level. It uses static noisy tuning curves sampled at probe SFs.
+Voxel-wise pSFT fitting with HRF convolution belongs in the pSF-Toolbox.
 
-Axis: x = log2(SF in cpd). A Gaussian on this axis is a log-Gaussian in cpd
-(Ramirez et al. 2025 Eq. 1 uses natural log; the bandwidth differs by ln 2).
+The x axis is log2(SF in cpd), so a Gaussian here is a log-Gaussian in cpd.
 
     python -m sfu.simulation --out figures/simulation
 """
@@ -158,7 +155,7 @@ def make_figures(out: str | Path, noise_sd: float = 0.1, seed: int = 0) -> list[
         ax.set_xticks(np.log2([0.25, 1, 4, 12]), ["0.25", "1", "4", "12"]); ax.set_xlabel("SF (cpd)")
     for ax in axs[:, 0]:
         ax.set_ylabel("response (a.u.)")
-    fig.suptitle(f"SYNTHETIC tuning scenarios (noise SD {noise_sd}); not data", fontsize=11, color="firebrick")
+    fig.suptitle(f"Simulated tuning scenarios (noise SD {noise_sd})", fontsize=11, color="firebrick")
     fig.tight_layout(); f = out / "synthetic_tuning_scenarios.png"; fig.savefig(f, dpi=130); plt.close(fig); files.append(f)
 
     pr = parameter_recovery(noise_sd=noise_sd, seed=seed)
@@ -169,7 +166,7 @@ def make_figures(out: str | Path, noise_sd: float = 0.1, seed: int = 0) -> list[
         ax.plot(lim, lim, color="0.6", lw=0.8)
         s = pr["summary"][n]
         ax.set_title(f"{n}: r={s['r']:.2f}, RMSE={s['rmse']:.2f}", fontsize=9); ax.set_xlabel("true"); ax.set_ylabel("recovered")
-    fig.suptitle("SYNTHETIC parameter recovery: Gaussian generator -> Gaussian fit", fontsize=10, color="firebrick")
+    fig.suptitle("Simulated parameter recovery: Gaussian generator, Gaussian fit", fontsize=10, color="firebrick")
     fig.tight_layout(); f = out / "synthetic_parameter_recovery.png"; fig.savefig(f, dpi=130); plt.close(fig); files.append(f)
 
     mr = model_recovery(noise_sd=noise_sd, seed=seed + 1)
@@ -179,7 +176,7 @@ def make_figures(out: str | Path, noise_sd: float = 0.1, seed: int = 0) -> list[
         ax.text(j, i, f"{v:.2f}", ha="center", va="center", color="w" if v > 0.5 else "k", fontsize=9)
     ax.set_xticks(range(len(mr["candidates"])), mr["candidates"], rotation=20); ax.set_yticks(range(len(mr["generators"])), mr["generators"])
     ax.set_xlabel("selected by BIC"); ax.set_ylabel("generating model"); fig.colorbar(im, ax=ax, fraction=0.04)
-    ax.set_title("SYNTHETIC model recovery", fontsize=10, color="firebrick")
+    ax.set_title("Simulated model recovery", fontsize=10, color="firebrick")
     fig.tight_layout(); f = out / "synthetic_model_recovery.png"; fig.savefig(f, dpi=130); plt.close(fig); files.append(f)
     return files
 
@@ -192,9 +189,9 @@ def main(argv=None):
     for f in make_figures(a.out, a.noise_sd):
         print(f)
     pr = parameter_recovery(noise_sd=a.noise_sd)
-    print("SYNTHETIC parameter recovery:", {k: {m: round(v, 3) for m, v in d.items()} for k, d in pr["summary"].items()})
+    print("Simulated parameter recovery:", {k: {m: round(v, 3) for m, v in d.items()} for k, d in pr["summary"].items()})
     mr = model_recovery(noise_sd=a.noise_sd)
-    print("SYNTHETIC model recovery (rows=generator, cols=", mr["candidates"], "):\n", mr["confusion"].round(2))
+    print("Simulated model recovery (rows=generator, cols=", mr["candidates"], "):\n", mr["confusion"].round(2))
 
 
 if __name__ == "__main__":

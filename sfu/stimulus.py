@@ -1,10 +1,9 @@
-"""Gabor stimulus parameters, PsychoPy factory, and a numpy preview renderer.
+"""Gabor parameters for PsychoPy GratingStim and a numpy preview.
 
-PsychoPy convention (checked against psychopy 2026.2.5 tools/arraytools.py):
-mask='gauss' with maskParams={'sd': 3} gives envelope SD = size/6, so we set
-size = 6 * envelope_sd. All PsychoPy stimuli use units='pix' with SF converted
-by our own calibration (sfu.calibration), so cpd never depends on PsychoPy's
-small-angle 'deg' approximation. ori: degrees clockwise from vertical; phase in cycles.
+In PsychoPy, mask='gauss' with maskParams={'sd': 3} gives an envelope SD of
+size/6, so size = 6 * envelope SD. Stimuli use units='pix' with SF converted by
+sfu.calibration. Orientation is in degrees clockwise from vertical; phase is in
+cycles.
 """
 from __future__ import annotations
 

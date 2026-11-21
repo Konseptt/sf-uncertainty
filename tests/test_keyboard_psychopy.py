@@ -1,6 +1,7 @@
-"""Real PsychoPy window + in-process macOS key events (no Accessibility permission needed).
-Regression test for the instructions screen never receiving keys. Skipped without
-PsychoPy/pyobjc (e.g. the core .venv); run with .venv-psychopy."""
+"""Opens a real PsychoPy window and sends it macOS key events from inside the
+process. Checks that the instructions screen and a trial receive key presses.
+Skipped when PsychoPy or pyobjc is not installed.
+"""
 import sys
 import threading
 import time

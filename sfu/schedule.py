@@ -1,22 +1,16 @@
-"""Trial scheduling: seeds, counterbalancing, SF sampling, response balancing, probes.
+"""Trial scheduling: seeds, counterbalancing, SF sampling, response balancing
+and probes.
 
-Two sampling schemes (config.design.sampling):
+Sampling (design.sampling):
+* probability: each trial is an independent draw from the PMF, so realized
+  proportions vary by block and must be reported per block.
+* fixed_count: counts per level are set by largest-remainder rounding and then
+  shuffled. Realized proportions match the PMF, but late trials in a block are
+  in principle predictable.
 
-* probability  - each trial's SF level is an independent draw from the PMF. The
-  sequence is truly i.i.d. (no information in trial history about upcoming
-  trials), but the realized frequencies deviate from the PMF by sampling error
-  (SD of a level's proportion = sqrt(p(1-p)/n)); realized moments differ from
-  intended ones and must be reported per block.
-* fixed_count  - counts per level are fixed by largest-remainder rounding of
-  p*n, then shuffled. Realized proportions equal the rounded PMF exactly, so
-  conditions can be compared without sampling noise in the stimulus set, but
-  the sequence is sampling *without replacement*: late in a block, remaining
-  levels are predictable in principle, and rare levels have exact counts
-  (possibly 0) that a participant could learn.
-
-All randomness derives from np.random.SeedSequence([study_seed, hash(participant,
-session)]); each block gets a spawned child seed so regenerating any block is
-independent of the others (needed for abort/resume).
+All randomness comes from np.random.SeedSequence([study_seed, hash(participant,
+session)]), with one child seed per block so any block can be regenerated on its
+own when resuming.
 """
 from __future__ import annotations
 

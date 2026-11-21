@@ -1,8 +1,8 @@
-"""Per-SF orientation staircases (2-down/1-up, converges near 70.7% correct).
+"""Per-SF 2-down/1-up orientation staircases (about 71% correct).
 
-Used only in the calibration block (uniform prior), then *frozen*: main blocks
-use a fixed tilt per SF level. A staircase running during the main blocks would
-partially absorb the very expectation effect under study.
+Run only in the calibration block with a uniform prior. The resulting tilts are
+then fixed for the main blocks, because a staircase running there would absorb
+part of the expectation effect.
 """
 from __future__ import annotations
 

@@ -1,9 +1,6 @@
-"""Response collection. Real keyboard input lives in runner.PsychoPyBackend
-(psychopy.hardware.keyboard; RT clock reset on the stimulus-onset flip).
-
-* SimulatedObserver: SYNTHETIC responses for headless runs and window smoke
-  tests. Its parameters are invented for software testing and carry no
-  empirical meaning.
+"""Simulated observer used by headless runs and --autorespond. Its parameters
+are made up for testing the software. Real keyboard input is handled in
+runner.PsychoPyBackend.
 """
 from __future__ import annotations
 

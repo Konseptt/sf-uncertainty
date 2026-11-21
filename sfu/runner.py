@@ -1,8 +1,8 @@
-"""Session driver + backends + CLI.
+"""Session driver and command line.
 
-    python -m sfu.runner --config configs/pilot.json --participant P01 --session 1 --cb-index 0
-    python -m sfu.runner --config configs/demo.json --participant demo --headless      # no display
-    python -m sfu.runner --config configs/demo.json --participant demo --demo --windowed --autorespond
+    python -m sfu.runner --config configs/pilot.json --participant P01 --session 1
+    python -m sfu.runner --config configs/demo.json --participant demo01 --headless
+    python -m sfu.runner --config configs/demo.json --participant demo01 --demo --windowed
     python -m sfu.runner --config configs/pilot.json --check-calibration
 """
 from __future__ import annotations
@@ -50,7 +50,7 @@ def _now() -> str:
 
 
 class HeadlessBackend:
-    """No window, no PsychoPy. Responses from a SYNTHETIC observer; timings are
+    """No window, no PsychoPy. Responses from a simulated observer; timings are
     nominal frame counts. For testing logic only."""
     name = "headless"
 

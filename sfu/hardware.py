@@ -1,6 +1,7 @@
-"""Scanner trigger and event-marker hooks. Hardware-dependent code is imported
-lazily so the rest of the package runs without it. NOT validated against any
-scanner or EEG/MEG system; check latency with a scope/photodiode before use."""
+"""Scanner trigger and event-marker hooks. Hardware libraries are imported only
+when used. Not yet tested with a scanner or EEG system; measure latency before
+use.
+"""
 from __future__ import annotations
 
 import logging

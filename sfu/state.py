@@ -1,6 +1,6 @@
-"""Session-level state machine. Trial-internal phases (fixation, stimulus,
-response, ITI) are frame loops inside the backend; this machine guards the
-session flow and records every transition with a timestamp for the log."""
+"""Session state machine. It checks the order of session phases and records each
+transition with a timestamp. Trial phases are frame loops in the backend.
+"""
 from __future__ import annotations
 
 import time

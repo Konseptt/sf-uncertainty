@@ -1,11 +1,10 @@
-"""Behavioral analysis + stimulus-distribution validation.
+"""Behavioral analysis and checks of the realized SF distributions.
 
     python -m sfu.analysis data/demo --out figures/demo
 
-Behavioral accuracy/RT differences across expectation conditions are NOT
-evidence about neural SF tuning. They can arise from decision-level priors,
-response bias, attention, or adaptation. Tuning claims need neural data
-(e.g. fMRI pSFT fits with the pSF-Toolbox) and the controls in docs/PROTOCOL.md.
+Differences in accuracy or RT between conditions do not show changes in neural
+tuning. They can come from decision priors, response bias, attention or
+adaptation.
 """
 from __future__ import annotations
 
@@ -101,7 +100,7 @@ def plot_all(df: pd.DataFrame, side: dict, out: str | Path) -> list[Path]:
     import matplotlib.pyplot as plt
     out = Path(out); out.mkdir(parents=True, exist_ok=True)
     synthetic = bool(df.get("synthetic", pd.Series([False])).astype(str).eq("True").any())
-    tag = "  [SYNTHETIC DATA - simulated observer]" if synthetic else ""
+    tag = "  [simulated observer, not real data]" if synthetic else ""
     files = []
     # 1. intended vs realized
     main = df[df.block_type == "main"]
@@ -155,9 +154,9 @@ def main(argv=None):
     files = plot_all(df, side, out)
     pd.set_option("display.width", 200, "display.max_columns", 30)
     print(v.round(4).to_string(index=False)); print(); print(b.round(3).to_string(index=False))
-    print("\nNOTE: behavioral effects are not direct evidence of neural tuning changes.")
+    print("\nBehavioral effects are not direct evidence of neural tuning changes.")
     if df.synthetic.astype(str).eq("True").any():
-        print("NOTE: data contain SYNTHETIC (simulated-observer) trials.")
+        print("Data include simulated-observer trials.")
     print("\n".join(map(str, files)))
 
 

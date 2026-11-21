@@ -1,10 +1,8 @@
-"""Researcher interface: configure distributions, monitor, design; inspect
-statistics; preview Gabors at true px/deg; generate + export reproducible
-schedules; compare intended vs realized distributions.
+"""Researcher interface: set distributions, monitor and design values, inspect
+statistics, preview Gabors at the monitor's pixels per degree, and generate and
+export trial sequences.
 
     python -m sfu.gui --config configs/demo.json
-
-Plain matplotlib widgets (no extra GUI dependency). Not shown to participants.
 """
 from __future__ import annotations
 
@@ -137,7 +135,7 @@ class ResearcherGUI:
                 r = realized[name] / realized[name].sum()
                 ax.plot(g, r, "o", ms=4, color="k", label="realized")
             m = cond["match"]
-            flag = "" if not m or "matched" not in m else ("  [matched]" if m["matched"] else "  [NOT matched]")
+            flag = "" if not m or "matched" not in m else ("  [matched]" if m["matched"] else "  [not matched]")
             ax.set_title(name + flag, fontsize=9)
             ax.set_xticks(g[::2], [f"{2**v:.2g}" for v in g[::2]], fontsize=7)
             ax.tick_params(labelsize=7)

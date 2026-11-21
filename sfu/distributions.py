@@ -1,17 +1,11 @@
 """Discrete probability distributions over a log2 spatial-frequency grid.
 
-All distributions are PMFs on a fixed grid of log2(SF) levels. Continuous
-densities are evaluated at grid points and renormalized (i.e. truncated to the
-grid range and discretized). Reported statistics are always computed from the
-*discrete* PMF actually used to sample stimuli, never from the continuous
-generator.
+Continuous densities are evaluated at the grid points and renormalized. All
+reported statistics come from the discrete PMF used to sample stimuli.
 
-Skew terminology (important): "right-skewed" here means positive statistical
-skewness = a long tail toward HIGH SF. Under mode matching this puts more
-probability above the mode (P(SF > 2 cpd) > 0.5), which matches the intuitive
-definition "greater probability of higher SFs". Under mean matching the
-same distribution has its mode BELOW the mean. `stats()` reports `p_above_center`
-so the reader never has to infer this.
+"Right-skewed" means positive skewness, i.e. a longer tail toward high SF. With
+mode matching this puts more probability above the peak. With mean matching the
+peak sits below the mean. `stats()` reports `p_above_center` for both.
 """
 from __future__ import annotations
 

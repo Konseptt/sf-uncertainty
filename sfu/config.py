@@ -1,4 +1,5 @@
-"""Experiment configuration: dataclasses + validation + JSON IO."""
+"""Experiment configuration: dataclasses, validation and JSON IO.
+"""
 from __future__ import annotations
 
 import json

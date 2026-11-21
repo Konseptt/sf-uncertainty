@@ -1,6 +1,7 @@
-"""Crash-safe trial logging: one CSV row per trial (flushed + fsynced), plus a
-JSON sidecar with config, schedule summary, seeds, versions and state history.
-The CSV is the checkpoint used for abort recovery."""
+"""Trial logging. Each trial is written to the CSV and synced to disk before the
+next one starts, and the CSV doubles as the checkpoint for resuming. A JSON
+sidecar holds the config, schedule summary, seeds and one record per run.
+"""
 from __future__ import annotations
 
 import csv

@@ -1,7 +1,7 @@
-"""Diagnostic plots: theoretical PMFs vs sampled distributions, both matching modes,
-both sampling schemes. Also writes the statistics table for each matching mode.
+"""Plots of theoretical vs sampled distributions for both matching schemes and
+both sampling methods, plus a statistics table for each scheme.
 
-    python scripts/diagnostics.py --out figures/diagnostics
+    PYTHONPATH=. python scripts/diagnostics.py --out figures/diagnostics
 """
 import argparse
 import json

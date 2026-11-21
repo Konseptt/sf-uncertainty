@@ -1,12 +1,11 @@
 """Monitor geometry and visual-angle conversion.
 
-Exact geometry (no small-angle approximation): a stimulus of `deg` degrees
-centred on the line of sight spans 2*d*tan(deg/2) cm. For eccentric stimuli,
-the position uses d*tan(ecc). Pixels-per-degree reported at screen centre.
+Uses exact geometry: a centred stimulus of `deg` degrees spans 2*d*tan(deg/2) cm,
+and a point at eccentricity `ecc` lies d*tan(ecc) from the centre. Pixels per
+degree are reported at the screen centre.
 
-`calibrated` must be set True only after the width, resolution and viewing
-distance have been physically measured (and, ideally, luminance gamma-corrected).
-Nothing in this module can verify that; it only records the claim.
+Set `calibrated` to True only after measuring the screen width, resolution and
+viewing distance.
 """
 from __future__ import annotations
 
