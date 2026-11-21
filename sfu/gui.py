@@ -55,7 +55,8 @@ def _set(cfg: ExperimentConfig, path: str, val) -> ExperimentConfig:
 
 
 def _radio(fig, rect, labels, current, RadioButtons):
-    return RadioButtons(fig.add_axes(rect), labels, active=labels.index(current) if current in labels else 0)
+    return RadioButtons(fig.add_axes(rect), labels, active=labels.index(current) if current in labels else 0,
+                        useblit=False)
 
 
 def session_minutes(cfg: ExperimentConfig, n_trials: int, n_blocks: int) -> tuple[float, float]:
@@ -112,24 +113,29 @@ class ResearcherGUI:
         for i, (k, lo, hi) in enumerate(SLIDERS):
             ax = fig.add_axes([x0 + 0.07, 0.845 - i * 0.03, 0.14, 0.02])
             self.sliders[k] = Slider(ax, k, lo, hi, valinit=getattr(d, k))
-            self.sliders[k].drawon = False  # no full-figure redraw per mouse move
-            self.sliders[k].on_changed(lambda _v: (self._blit_sliders(), self._refresh_later()))
+            self.sliders[k].on_changed(lambda _v: (self._touch("sliders"), self.refresh()))
 
         self.cond_names = list(dict.fromkeys(list(CONDITIONS) + list(d.custom)))
         fig.text(x0, 0.70, "Conditions run", fontsize=9)
         self.c_conds = CheckButtons(fig.add_axes([x0, 0.575, 0.12, 0.12]), self.cond_names,
-                                    [n in d.conditions for n in self.cond_names])
+                                    [n in d.conditions for n in self.cond_names], useblit=False)
         fig.text(x0 + 0.125, 0.70, "Paradigm", fontsize=9)
         self.r_para = _radio(fig, [x0 + 0.125, 0.64, 0.10, 0.055], ["orientation", "probe"], cfg.design.paradigm, RadioButtons)
         fig.text(x0 + 0.125, 0.628, "Probe type", fontsize=9)
         self.r_ptype = _radio(fig, [x0 + 0.125, 0.575, 0.10, 0.05], ["noise", "gabor"], cfg.design.probe_type, RadioButtons)
 
         fig.text(x0, 0.545, "Session / monitor / timing", weight="bold")
+        rows = (len(FIELDS) + 1) // 2  # backdrop so box labels are repainted cleanly on fast updates
+        self.ax_bpanel = fig.add_axes([x0, 0.505 - (rows - 1) * 0.032 - 0.004, 0.25, rows * 0.032], facecolor=fig.get_facecolor())
+        self.ax_bpanel.set_xticks([]); self.ax_bpanel.set_yticks([])
+        for sp in self.ax_bpanel.spines.values():
+            sp.set_visible(False)
         self.boxes = {}
         for i, (lab, path, _t) in enumerate(FIELDS):
             ax = fig.add_axes([x0 + 0.07 + (i % 2) * 0.115, 0.505 - (i // 2) * 0.032, 0.045, 0.025])
             self.boxes[lab] = TextBox(ax, lab + " ", initial=str(self.ids[lab] if path is None else _get(cfg, path)))
-            self.boxes[lab].on_submit(lambda _t: self.refresh())
+            self.boxes[lab].on_submit(lambda _t: (self._touch("boxes"), self.refresh()))
+            self.boxes[lab].on_text_change(lambda _t: (self._touch("boxes"), self._update()))
         fig.text(x0, 0.31, "EEG markers", fontsize=9)
         self.r_mark = _radio(fig, [x0 + 0.07, 0.29, 0.16, 0.04], ["none", "lsl"],
                              cfg.design.markers if cfg.design.markers in ("none", "lsl") else "none", RadioButtons)
@@ -139,8 +145,9 @@ class ResearcherGUI:
         self.b_gen.on_clicked(lambda _e: self.generate())
         self.b_exp.on_clicked(lambda _e: self.export())
         self.b_run.on_clicked(lambda _e: self.run())
+        self._dirty = set()
         for w in (self.r_match, self.r_samp, self.r_para, self.r_ptype, self.r_mark, self.c_conds):
-            w.on_clicked(lambda _l: self.refresh())
+            w.on_clicked(lambda _l, ax=w.ax: (self._touch(ax), self.refresh()))
         self.msg = fig.text(x0, 0.165, "", fontsize=8, va="top", family="monospace")
 
         # Right side: status banner, distribution plots, stimulus previews, statistics table.
@@ -161,32 +168,91 @@ class ResearcherGUI:
             ax.tick_params(labelsize=6); self.ax_g.append(ax)
         self._preview_key = None
         self.ax_t = fig.add_axes([0.29, 0.02, 0.69, 0.25]); self.ax_t.axis("off")
-        self.cols = ["condition", "runs", "mean cpd int/real", "SD oct int/real", "skew int/real",
-                     "entropy bits", "P(>2cpd)", "modes cpd", "matched", "realized check"]
-        self.n_rows = len(self.cond_names)
-        self.table = self.ax_t.table(cellText=[[""] * len(self.cols)] * self.n_rows, colLabels=self.cols,
-                                     loc="upper center", cellLoc="center")
-        self.table.auto_set_font_size(False); self.table.set_fontsize(8); self.table.scale(1, 1.25)
+        # Statistics table as monospace text: one row of aligned columns plus a coloured check column.
+        self.colw = [13, 5, 19, 17, 15, 8, 9, 11, 8]
+        head = ["condition", "runs", "mean cpd int/real", "SD oct int/real", "skew int/real",
+                "entropy", "P(>2cpd)", "modes cpd", "matched"]
+        mono = dict(family="monospace", fontsize=8, transform=self.ax_t.transAxes, va="top")
+        self.ax_t.text(0, 0.98, self._fmt_row(head) + "  realized check", weight="bold", **mono)
+        self.ax_t.plot([0, 1], [0.9, 0.9], color="0.6", lw=0.8, transform=self.ax_t.transAxes)
+        y = [0.86 - i * 0.1 for i in range(len(self.cond_names))]
+        self.row_text = [self.ax_t.text(0, yi, "", **mono) for yi in y]
+        char_w = 0.6 * 8 / (self.ax_t.get_position().width * fig.get_figwidth() * 72)  # monospace 8 pt, in axes units
+        self.row_check = [self.ax_t.text((len(self._fmt_row(head)) + 2) * char_w, yi, "", **mono) for yi in y]
         self.order_text = self.ax_t.text(0, -0.02, "", fontsize=8, transform=self.ax_t.transAxes)
 
-        self._timer = fig.canvas.new_timer(interval=150)  # redraw once a slider drag pauses
-        self._timer.single_shot = True
-        self._timer.add_callback(self.refresh)
+        # Fast redraw: the static figure is rendered once and cached. Changing artists are marked
+        # animated and redrawn on top of the cache, together with the widgets, then blitted.
+        widgets = [*self.sliders.values(), *self.boxes.values(), self.r_match, self.r_samp, self.r_para,
+                   self.r_ptype, self.r_mark, self.c_conds, self.b_gen, self.b_exp, self.b_run]
+        for w in widgets:
+            w.drawon = False
+        for b in (self.b_gen, self.b_exp, self.b_run):
+            b.hovercolor = b.color  # no hover repaint
+        self._widget_axes = [self.ax_spanel, self.ax_bpanel, *(w.ax for w in widgets)]
+        self._anim = [self.banner, self.limits, self.msg, self.order_text, *self.row_text, *self.row_check, *self.dots,
+                      *(r for bars in self.bars for r in bars), *(ax.title for ax in self.ax_d)]
+        for a in self._anim:
+            a.set_animated(True)
+        self._bg = None
+        self._text_cache = {}
+        self._ylim = 0.6
+        fig.canvas.mpl_connect("draw_event", self._on_draw)
         self.refresh()
 
-    def _blit_sliders(self):
+    def _on_draw(self, _event):
         c = self.fig.canvas
-        if not c.supports_blit:
+        self._dirty.clear()
+        self._bg = c.copy_from_bbox(self.fig.bbox) if c.supports_blit else None
+        self._text_cache = {}  # cached text images are only valid on top of this background
+        if self._bg is None:
+            for a in self._anim:
+                self.fig.draw_artist(a)
+        else:
+            self._draw_anim()
+
+    def _update(self, full: bool = False):
+        """Show the current state: blit changed artists onto the cached background, or redraw everything."""
+        c = self.fig.canvas
+        if full or self._bg is None:
             c.draw_idle()
             return
-        self.fig.draw_artist(self.ax_spanel)
-        for sl in self.sliders.values():
-            self.fig.draw_artist(sl.ax)
-        c.blit(self.ax_spanel.bbox)
+        c.restore_region(self._bg)
+        if self._dirty:  # repaint only widgets that changed, then keep them in the cached background
+            groups = {"sliders": [self.ax_spanel, *(s.ax for s in self.sliders.values())],
+                      "boxes": [self.ax_bpanel, *(b.ax for b in self.boxes.values())]}
+            for d in self._dirty:
+                for ax in groups.get(d, [d]):
+                    self.fig.draw_artist(ax)
+            self._dirty.clear()
+            self._bg = c.copy_from_bbox(self.fig.bbox)
+        self._draw_anim()
+        c.blit(self.fig.bbox)
 
-    def _refresh_later(self):
-        self._timer.stop()
-        self._timer.start()
+    def _draw_anim(self):
+        """Draw animated artists. Text whose content is unchanged is pasted from a cached image
+        of its own pixels (text drawing costs a few ms per line on a HiDPI screen)."""
+        c, r = self.fig.canvas, self.fig.canvas.get_renderer()
+        for a in self._anim:
+            if not hasattr(a, "get_text"):
+                self.fig.draw_artist(a)
+                continue
+            sig = (a.get_text(), a.get_color(), a.get_weight(), a.get_visible())
+            hit = self._text_cache.get(id(a))
+            if hit and hit[0] == sig:
+                c.restore_region(hit[1])
+                continue
+            self.fig.draw_artist(a)
+            bb = a.get_window_extent(r).padded(2) if a.get_text() else None
+            self._text_cache[id(a)] = (sig, c.copy_from_bbox(bb)) if bb is not None and bb.width > 0 else (sig, None)
+            if self._text_cache[id(a)][1] is None:
+                del self._text_cache[id(a)]
+
+    def _touch(self, key):
+        self._dirty.add(key)
+
+    def _fmt_row(self, vals) -> str:
+        return "".join(str(v)[:w - 1].ljust(w) for v, w in zip(vals, self.colw))
 
     # -- state ----------------------------------------------------------
     def _read(self) -> ExperimentConfig:
@@ -217,7 +283,7 @@ class ResearcherGUI:
         except (ValueError, KeyError) as e:
             self.msg.set_text(f"ERROR: {e}")
             self.banner.set_text("Settings invalid; nothing will be exported or run"); self.banner.set_color("firebrick")
-            self.fig.canvas.draw_idle()
+            self._update()
             return False
         self._draw()
         return True
@@ -226,7 +292,7 @@ class ResearcherGUI:
         if self.refresh():
             n = sum(len(b["trials"]) for b in self.sched["blocks"])
             self.msg.set_text(f"seed {self.sched['seed']}\n{n} trials\norder: {' > '.join(self.sched['order'])}")
-            self.fig.canvas.draw_idle()
+            self._update()
 
     # -- drawing (artists are created once and updated in place) ---------
     def _draw(self):
@@ -245,8 +311,12 @@ class ResearcherGUI:
                              f"(min {lim['min_px_per_cycle']:g})   stimulus edge {lim['reach_px']:.0f} of "
                              f"{lim['half_width_px']:.0f} px from centre   paradigm: {c.design.paradigm}")
 
+        full = False
+        ylim = max([0.6] + [float(np.max(cd["pmf"])) * 1.1 for cd in s["conditions"].values()])
+        if ylim != self._ylim:  # axis limits are part of the cached background
+            self._ylim, full = ylim, True
         if getattr(self, "_grid", None) is None or not np.array_equal(self._grid, g):  # ticks only change with the grid
-            self._grid = g
+            self._grid, full = g, True
             for ax in self.ax_d:
                 ax.set_xticks(np.arange(len(g))[::2], [f"{2**v:.2g}" for v in g[::2]])
         for ax, bars, dots, name in zip(self.ax_d, self.bars, self.dots, self.cond_names):
@@ -260,12 +330,12 @@ class ResearcherGUI:
             flag = "" if "matched" not in m else ("  [matched]" if m["matched"] else "  [not matched]")
             ax.set_title(name + flag + ("" if name in runs and runs[name] else "  (not run)"), fontsize=9,
                          color="k" if runs.get(name) else "0.6")
-            ax.set_ylim(0, max(0.5, p.max() * 1.15))
+            ax.set_ylim(0, self._ylim)
 
         key = (c.monitor, c.stimulus, c.distributions.sf_min_cpd, c.distributions.sf_max_cpd,
                c.design.paradigm, c.design.probe_type, c.design.probe_noise_bandwidth_oct, c.design.probe_contrast)
         if key != self._preview_key:  # images depend only on these settings
-            self._preview_key = key
+            self._preview_key, full = key, True
             field = 6 * max_envelope_sd_deg(c)
             for ax, im, sf in zip(self.ax_g[:3], self.imgs[:3], (2 ** g[0], 2 ** g[len(g) // 2], 2 ** g[-1])):
                 img, ext = render_gabor(c, sf, ori=0, phase=0.25, field_deg=field)
@@ -294,20 +364,18 @@ class ResearcherGUI:
                 return f"{st[k]:{fmt}}" + (f" / {rs[k]:{fmt}}" if rs else "")
             if rs:
                 off = max(abs(rs["mean_log2"] - st["mean_log2"]), abs(rs["sd_octaves"] - st["sd_octaves"]))
-                check, color = (f"ok ({off:.3f} oct)", "#e6f2e6") if off <= TOL_OCT else (f"OFF by {off:.3f} oct", "#f6d5d5")
+                check, color = (f"ok ({off:.3f} oct)", "darkgreen") if off <= TOL_OCT else (f"OFF by {off:.3f} oct", "firebrick")
             else:
-                check, color = "not run", "white"
-            vals = [name, str(runs.get(name, 0)), pair("mean_cpd_geometric", ".3f"), pair("sd_octaves", ".3f"),
+                check, color = "not run", "0.6"
+            vals = [name, runs.get(name, 0), pair("mean_cpd_geometric", ".3f"), pair("sd_octaves", ".3f"),
                     pair("skewness", "+.2f"), f"{st['entropy_bits']:.3f}", f"{st['p_above_center']:.3f}",
-                    ",".join(f"{v:.2f}" for v in st["modes_cpd"]) or "none", str(m.get("matched", "-")), check]
-            for j, v in enumerate(vals):
-                cell = self.table[i + 1, j]
-                cell.get_text().set_text(v)
-                cell.set_facecolor(color if j == len(vals) - 1 else "white")
-                cell.get_text().set_color("k" if runs.get(name) else "0.6")
+                    ",".join(f"{v:.2f}" for v in st["modes_cpd"]) or "none", m.get("matched", "-")]
+            self.row_text[i].set_text(self._fmt_row(vals)); self.row_text[i].set_color("k" if runs.get(name) else "0.6")
+            self.row_check[i].set_text(check); self.row_check[i].set_color(color)
+            self.row_check[i].set_weight("bold" if color == "firebrick" else "normal")
         self.order_text.set_text(f"Block order (cb {self.ids['cb index']}): {' > '.join(s['order'])}    "
                                  f"sampling: {c.design.sampling}    seed: {s['seed']}    int/real = intended / realized")
-        self.fig.canvas.draw_idle()
+        self._update(full)
 
     # -- output -----------------------------------------------------------
     def export(self) -> Path | None:
@@ -325,9 +393,13 @@ class ResearcherGUI:
             w.writeheader()
             for b in s["blocks"]:
                 w.writerows(b["trials"])
+        for a in self._anim:
+            a.set_animated(False)
         self.fig.savefig(out / "overview.png", dpi=120)
+        for a in self._anim:
+            a.set_animated(True)
         self.msg.set_text(f"exported -> {out}")
-        self.fig.canvas.draw_idle()
+        self._update(full=True)
         return out
 
     def run(self) -> list[str] | None:
@@ -341,7 +413,7 @@ class ResearcherGUI:
             py = str(Path(__file__).resolve().parents[1] / ".venv-psychopy" / "bin" / "python")
             if not Path(py).exists():
                 self.msg.set_text("ERROR: PsychoPy not found; install requirements-psychopy.txt")
-                self.fig.canvas.draw_idle()
+                self._update()
                 return None
         cmd = [py, "-m", "sfu.runner", "--config", str(out / "config.json"),
                "--participant", str(self.ids["participant"]), "--session", str(self.ids["session"]),
@@ -351,7 +423,7 @@ class ResearcherGUI:
         subprocess.Popen(cmd, cwd=Path(__file__).resolve().parents[1])
         self.msg.set_text(f"started {self.ids['participant']} session {self.ids['session']}"
                           + ("\n(demo: monitor not calibrated)" if not self.cfg.monitor.calibrated else ""))
-        self.fig.canvas.draw_idle()
+        self._update()
         return cmd
 
 

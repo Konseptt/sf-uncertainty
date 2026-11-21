@@ -354,3 +354,18 @@ def test_gui_controls_reach_config_and_realized_check(tmp_path):
         if g.c_conds.get_status()[g.cond_names.index(name)]:
             g.c_conds.set_active(g.cond_names.index(name))
     assert g.export() is None and g.msg.get_text().startswith("ERROR")
+
+
+def test_gui_fast_redraw_matches_full_redraw(tmp_path):
+    import matplotlib
+    matplotlib.use("Agg")
+    from sfu import gui
+    g = gui.ResearcherGUI(small_cfg(paradigm="probe"), tmp_path)
+    g.fig.canvas.draw()
+    for v in np.linspace(0.3, 1.2, 8):
+        g.sliders["broad_sd"].set_val(v)
+    g.r_samp.set_active(1); g.c_conds.set_active(2); g.r_mark.set_active(1); g.boxes["participant"].set_val("Q9")
+    fast = np.asarray(g.fig.canvas.buffer_rgba()).copy()
+    g.fig.canvas.draw()
+    full = np.asarray(g.fig.canvas.buffer_rgba()).copy()
+    assert int((np.abs(fast.astype(int) - full.astype(int)).max(axis=2) > 30).sum()) == 0
