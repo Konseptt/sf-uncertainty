@@ -120,7 +120,7 @@ class PsychoPyBackend:
         self.event = event if cfg.keyboard_backend == "event" else None
         self.kb = None if self.event else keyboard.Keyboard(backend=cfg.keyboard_backend)
         self.rt_clock = core.Clock() if self.event else self.kb.clock
-        self.markers = make_markers(cfg.design.markers, cfg.design.serial_port)
+        self.markers = make_markers(cfg.design.markers, cfg.design.serial_port, cfg.design.lsl_stream_name)
 
     def _set(self, stim, sf, ori, phase, contrast, pos_deg):
         k = gabor_kwargs(self.cfg, sf, ori, phase, contrast, pos_deg)
@@ -188,7 +188,7 @@ class PsychoPyBackend:
         self.win.flip()
         self._wait_key(0.5)
         self.text.pos = (0, 0)
-        self.markers.send("block_start")
+        self.markers.send("block_start", None, f"block={block['block_index']} type={block['block_type']} cond={cond}")
 
     def block_end(self, block):
         self.markers.send("block_end")
@@ -236,7 +236,9 @@ class PsychoPyBackend:
             if f == 0:
                 self.win.callOnFlip(self._clear_keys)
                 self.win.callOnFlip(self.rt_clock.reset)
-                self.win.callOnFlip(self.markers.send, "stim_on")
+                self.win.callOnFlip(self.markers.send, "stim_on", None,
+                                    f"trial={trial['trial_uid']} cond={trial['condition']} sf={trial['sf_cpd']:.3f}"
+                                    + (f" probe_sf={trial['probe_sf_cpd']:.3f}" if trial["probe_present"] else ""))
             if f == n_stim:
                 self.win.callOnFlip(self.markers.send, "stim_off")
             t = self.win.flip()
@@ -249,7 +251,7 @@ class PsychoPyBackend:
                     raise Aborted()
                 if resp is None and plan is None:
                     resp = (name, rt)
-                    self.markers.send("response")
+                    self.markers.send("response", None, f"trial={trial['trial_uid']} key={name}")
             if plan and resp is None and plan[1] <= (f + 1) * self.fr:
                 resp = plan
             if resp and f >= n_stim:

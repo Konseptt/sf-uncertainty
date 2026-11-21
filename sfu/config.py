@@ -69,7 +69,8 @@ class DesignConfig:
     probe_contrast: float = 1.0             # Ramirez et al. used 100% Michelson contrast
     trigger: Literal["none", "keyboard", "serial"] = "none"
     trigger_key: str = "5"
-    markers: Literal["none", "log", "serial"] = "none"
+    markers: Literal["none", "log", "serial", "lsl"] = "none"
+    lsl_stream_name: str = "sfu_markers"
     serial_port: str = ""
 
 

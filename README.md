@@ -105,6 +105,10 @@ To run the participant display with a short demo:
 
 `--autorespond` makes it respond on its own. The demo configs use the `event` keyboard backend, which works on macOS without extra permissions but only times responses to the nearest frame. For real RT data, use `"keyboard_backend": "ptb"` and grant the terminal Input Monitoring permission.
 
+### EEG markers
+
+With `"markers": "lsl"` in the `design` section (and `pip install pylsl`), the experiment publishes a Lab Streaming Layer marker stream named `lsl_stream_name` (default `sfu_markers`). It sends block starts and ends, fixation, stimulus onset and offset, and responses, for example `stim_on trial=12 cond=narrow sf=2.000 probe_sf=0.707`. Stimulus onset markers are sent on the screen flip. Record the stream alongside the EEG with LabRecorder; `trial=` matches `trial_uid` in `trials.csv`.
+
 ### Behavioral pilot
 
 1. Copy `configs/pilot_template.json` to `configs/pilot.json`. Enter the measured screen width, resolution, viewing distance and refresh rate, then set `"calibrated": true`.

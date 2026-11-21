@@ -74,6 +74,7 @@
     "trigger": "none",
     "trigger_key": "5",
     "markers": "none",
+    "lsl_stream_name": "sfu_markers",
     "serial_port": ""
   },
   "key_left": "left",

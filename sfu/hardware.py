@@ -1,6 +1,6 @@
-"""Scanner trigger and event-marker hooks. Hardware libraries are imported only
-when used. Not yet tested with a scanner or EEG system; measure latency before
-use.
+"""Scanner trigger and event-marker hooks (log, serial port, Lab Streaming Layer).
+Hardware libraries are imported only when used. LSL markers are tested against an
+LSL inlet; serial output and scanner triggers are not yet tested on hardware.
 """
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ EVENT_CODES = {"block_start": 10, "fixation": 20, "stim_on": 30, "stim_off": 31,
 class Markers:
     """Null marker sink. Subclass and override `send` for real hardware."""
 
-    def send(self, event: str, code: int | None = None) -> None:
+    def send(self, event: str, code: int | None = None, info: str = "") -> None:
         pass
 
     def close(self) -> None:
@@ -23,8 +23,8 @@ class Markers:
 
 
 class LogMarkers(Markers):
-    def send(self, event, code=None):
-        log.info("marker %s=%s", event, EVENT_CODES.get(event, code))
+    def send(self, event, code=None, info=""):
+        log.info("marker %s=%s %s", event, EVENT_CODES.get(event, code), info)
 
 
 class SerialMarkers(Markers):
@@ -32,16 +32,36 @@ class SerialMarkers(Markers):
         import serial  # pyserial; install only if needed
         self.s = serial.Serial(port, baud, timeout=0)
 
-    def send(self, event, code=None):
+    def send(self, event, code=None, info=""):
         self.s.write(bytes([EVENT_CODES.get(event, code or 0) & 0xFF]))
 
     def close(self):
         self.s.close()
 
 
-def make_markers(kind: str, port: str = "") -> Markers:
+class LSLMarkers(Markers):
+    """Lab Streaming Layer string marker stream, e.g. "stim_on trial=12 cond=narrow sf=2.000".
+    LSL stamps each sample with its own clock when it is pushed; LabRecorder or any
+    LSL inlet aligns it with the EEG stream."""
+
+    def __init__(self, name: str = "sfu_markers"):
+        import pylsl  # install only if needed
+        self.pylsl = pylsl
+        info = pylsl.StreamInfo(name, "Markers", 1, pylsl.IRREGULAR_RATE, "string", name)
+        self.outlet = pylsl.StreamOutlet(info)
+
+    def send(self, event, code=None, info=""):
+        self.outlet.push_sample([f"{event} {info}".strip()])
+
+    def close(self):
+        del self.outlet
+
+
+def make_markers(kind: str, port: str = "", lsl_name: str = "sfu_markers") -> Markers:
     if kind == "serial":
         return SerialMarkers(port)
+    if kind == "lsl":
+        return LSLMarkers(lsl_name)
     return LogMarkers() if kind == "log" else Markers()
 
 
