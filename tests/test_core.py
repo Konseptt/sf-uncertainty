@@ -331,3 +331,26 @@ def test_noise_probe_seeds_identical_across_conditions():
                for b in s["blocks"] if b["block_type"] == "main"]
     assert all(x == streams[0] for x in streams)
     assert any(seed >= 0 for _, _, seed, _ in streams[0]) and streams[0][0][3] == "noise"
+
+
+def test_gui_controls_reach_config_and_realized_check(tmp_path):
+    import matplotlib
+    matplotlib.use("Agg")
+    from sfu import gui
+    g = gui.ResearcherGUI(small_cfg(), tmp_path)
+    g.c_conds.set_active(g.cond_names.index("uniform"))          # untick uniform
+    g.r_para.set_active(1); g.r_ptype.set_active(0)               # probe paradigm, noise probes
+    assert "uniform" not in g.cfg.distributions.conditions
+    assert (g.cfg.design.paradigm, g.cfg.design.probe_type) == ("probe", "noise")
+    assert "uniform" not in g.sched["order"]
+    real = gui.realized_stats(g.sched)
+    for name, rs in real.items():                                 # fixed_count: realized matches intended
+        assert abs(rs["mean_log2"] - g.sched["conditions"][name]["stats"]["mean_log2"]) <= gui.TOL_OCT
+    typ, longest = gui.session_minutes(g.cfg, 100, 4)
+    assert 0 < typ <= longest
+    lim = gui.display_limits(g.cfg)
+    assert lim["sf_hi"] == g.cfg.design.probe_sf_max_cpd and lim["reach_px"] < lim["half_width_px"]
+    for name in g.cond_names:                                     # unticking every condition is rejected
+        if g.c_conds.get_status()[g.cond_names.index(name)]:
+            g.c_conds.set_active(g.cond_names.index(name))
+    assert g.export() is None and g.msg.get_text().startswith("ERROR")

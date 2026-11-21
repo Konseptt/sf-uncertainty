@@ -134,12 +134,13 @@ The `"design"` section sets `sampling` and `cue`. `sampling` is either `fixed_co
 
 `sfu.gui` lets you:
 
-- adjust the distributions with sliders and see the six PMFs and their statistics update
-- preview Gabors at the monitor's real pixels per degree
+- choose which conditions run, the paradigm (orientation or probe) and the probe type (noise or Gabor)
+- adjust the distributions with sliders and see the PMFs update
+- compare intended and realized statistics for the generated trials; a condition whose realized mean or SD is more than 0.05 octaves off is flagged
+- see calibration status, pixels per cycle at the highest SF, whether the stimulus fits on screen, and the session length
+- preview the target Gabors and the probe at the monitor's real pixels per degree
 - set participant, session, monitor and timing values, and turn LSL markers on or off
-- generate the exact trial sequence for a participant
-- export the config, trial sequence and an overview figure
-- start the participant window with exactly these settings (**Run session**). With an uncalibrated monitor it runs as a windowed demo
+- export the config, trial sequence and an overview figure, or start the participant window with exactly these settings (**Run session**). With an uncalibrated monitor it runs as a windowed demo
 
 ## Data
 
