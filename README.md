@@ -34,19 +34,31 @@ Questions 1 to 7 need neural data, such as fMRI pSFT fits with the [pSF-Toolbox]
 
 ## The task
 
-The participant fixates a central cross on a gray screen. Each trial shows a 100 ms Gabor at 5° eccentricity, and the participant reports whether it is tilted counter-clockwise (left arrow) or clockwise (right arrow) within 1.5 s. There is no feedback. The intertrial interval is jittered between 0.8 and 1.4 s.
+```mermaid
+flowchart LR
+    A[Instructions] --> B[Practice<br/>12 trials]
+    B --> C[Calibration<br/>uniform prior<br/>staircase per SF]
+    C --> D[Tilt per SF fixed]
+    D --> E[6 main blocks<br/>108 trials each<br/>counterbalanced order]
+    E --> F[Done]
+```
 
-A session runs as follows:
+Each main block opens with a histogram of the SF probabilities for that block. Each trial:
 
-1. 12 practice trials.
-2. An optional calibration block with a uniform prior. A 2-down/1-up staircase for each SF finds the tilt that gives about 71% correct, and that tilt is then fixed for the rest of the session so difficulty is equal across SFs.
-3. Six main blocks of 108 trials, one per distribution, in counterbalanced order (Williams square). Each block starts with a histogram showing how likely each SF is.
+```mermaid
+flowchart LR
+    F1[Fixation<br/>500 ms] --> G[Gabor at 5°<br/>100 ms] --> R[Response window<br/>left = CCW, right = CW<br/>up to 1.5 s] --> I[ITI<br/>0.8 to 1.4 s]
+```
+
+There is no feedback. The calibration staircases (2-down/1-up, about 71% correct) equate difficulty across SFs before the main blocks, and the tilt stays fixed after that.
 
 The full session is about 930 trials, roughly 40 minutes. Every trial is saved as soon as it ends. Escape stops the session, and `--resume` continues from the next unsaved trial. A resume is refused if the config, the counterbalancing row or the data columns have changed since the session started.
 
 ## Conditions
 
 SFs come from a 9-level log2 grid from 1 to 4 cpd, centered on 2 cpd.
+
+![The six default conditions](figures/conditions.png)
 
 | Condition | Description |
 |---|---|

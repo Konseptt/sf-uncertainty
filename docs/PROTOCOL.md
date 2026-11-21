@@ -39,6 +39,10 @@ I use mode matching by default because it matches the design discussed on 17 Nov
 - **H2, distribution-matched tuning.** The population profile follows the prior: skewed priors give asymmetric pSFT, and the bimodal prior gives a flattened or two-peaked pSFT.
 - **H3, gain only.** Responses are scaled up at expected SFs without any change in tuning. At the voxel level, gain applied to a mixed population can look like a peak or bandwidth change, so H2 and H3 can only be separated with a pooling model.
 
+Simulated examples of the tuning changes these hypotheses predict, with Gaussian and spline fits:
+
+![Simulated tuning scenarios](../figures/simulation/synthetic_tuning_scenarios.png)
+
 ## Sampling
 
 With probability sampling, each trial is an independent draw. Trial history carries no information, but the realized proportions vary from block to block: with 108 trials, the realized SD varies by about ±0.05 octaves. With fixed-count sampling, the counts per level are set exactly and then shuffled. The realized distribution then matches the intended one to within 0.005 octaves, but the order is sampling without replacement, so late trials in a block are in principle predictable. I use fixed counts by default.

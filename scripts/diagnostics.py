@@ -47,3 +47,14 @@ for mode in ("moment_matched", "mode_matched"):
     fig.tight_layout(); fig.savefig(out / f"theoretical_vs_sampled_{mode}.png", dpi=120); plt.close(fig)
     print(f"== {mode} ==\n{stats_table(conds)}\n")
 print("wrote", out)
+
+# one-row figure of the default conditions for the README
+conds = build_conditions(g, "mode_matched")
+fig, axs = plt.subplots(1, 6, figsize=(14, 2.3), sharey=True)
+for ax, (name, c) in zip(axs, conds.items()):
+    ax.bar(g, c["pmf"], width=0.2, color="0.35")
+    ax.set_title(name.replace("_", " "), fontsize=10)
+    ax.set_xticks(g[::4], [f"{2**v:.0f}" for v in g[::4]])
+    ax.set_xlabel("SF (cpd)", fontsize=8)
+axs[0].set_ylabel("probability")
+fig.tight_layout(); fig.savefig("figures/conditions.png", dpi=120); plt.close(fig)
