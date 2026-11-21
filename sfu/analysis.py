@@ -136,7 +136,8 @@ def plot_all(df: pd.DataFrame, side: dict, out: str | Path) -> list[Path]:
     # 3. timing QC
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(8, 3))
     a1.hist(df.duration_measured_ms.dropna(), bins=30, color="0.4"); a1.set_xlabel("measured stimulus duration (ms)")
-    a2.hist(df.dropped_frames, bins=np.arange(df.dropped_frames.max() + 2) - 0.5, color="0.4"); a2.set_xlabel("dropped frames per trial")
+    col = "stim_dropped_frames" if "stim_dropped_frames" in df else "dropped_frames"
+    a2.hist(df[col], bins=np.arange(df[col].max() + 2) - 0.5, color="0.4"); a2.set_xlabel(col.replace("_", " ") + " per trial")
     fig.suptitle("Timing QC" + tag, fontsize=10); fig.tight_layout()
     f = out / "timing_qc.png"; fig.savefig(f, dpi=130); plt.close(fig); files.append(f)
     return files

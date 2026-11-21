@@ -189,6 +189,9 @@ def test_abort_and_resume_no_duplicates(tmp_path):
     with pytest.raises(FileExistsError):
         _run(cfg, tmp_path)
     _run(cfg, tmp_path, resume=True)
+    runs = json.loads((out / "session.json").read_text())["runs"]
+    assert [r["status"] for r in runs] == ["aborted", "complete"]
+    assert [r["trials_logged"] for r in runs][0] == 50
     uids = [int(r["trial_uid"]) for r in csv.DictReader(open(out / "trials.csv"))]
     n = sum(len(b["trials"]) for b in build_session(cfg, "T01", 1, 1)["blocks"])
     assert sorted(uids) == list(range(n))
@@ -259,3 +262,28 @@ def test_position_exact_at_any_polar_angle():
         assert math.hypot(x, y) == pytest.approx(m.ecc2px(c.stimulus.eccentricity_deg))
         assert math.degrees(math.atan2(y, x)) % 360 == pytest.approx(angle % 360)
     assert position_px(m, (0.0, 0.0)) == (0.0, 0.0)
+
+
+def test_crash_marks_run_crashed(tmp_path):
+    cfg = small_cfg()
+    be = HeadlessBackend(cfg, SimulatedObserver(np.random.default_rng(0)))
+    calls = {"n": 0}
+    real = be.run_trial
+    def boom(t, tilt):
+        calls["n"] += 1
+        if calls["n"] == 3:
+            raise KeyboardInterrupt
+        return real(t, tilt)
+    be.run_trial = boom
+    with pytest.raises(KeyboardInterrupt):
+        run_session(cfg, "C01", 1, 0, be, tmp_path)
+    side = json.loads((tmp_path / "sub-C01_ses-1" / "session.json").read_text())
+    assert side["status"] == "crashed" and side["runs"][0]["trials_logged"] == 2
+
+
+def test_resume_refuses_csv_with_other_columns(tmp_path):
+    out = _run(small_cfg(), tmp_path, abort_after=5)
+    rows = (out / "trials.csv").read_text().splitlines()
+    (out / "trials.csv").write_text("\n".join([rows[0].replace(",stim_dropped_frames", "")] + rows[1:]) + "\n")
+    with pytest.raises(RuntimeError):
+        _run(small_cfg(), tmp_path, resume=True)

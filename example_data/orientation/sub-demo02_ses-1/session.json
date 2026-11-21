@@ -87,16 +87,6 @@
     "min_px_per_cycle": 4.0,
     "max_frame_rate_error": 0.01
   },
-  "software": {
-    "sfu": "0.1.0",
-    "python": "3.12.15",
-    "numpy": "2.5.5",
-    "platform": "macOS-27.3-arm64-arm-64bit",
-    "psychopy": "not installed",
-    "git_commit": "be15d6d5e4e61037d2dd664c871f881cf5705eb5"
-  },
-  "backend": "headless",
-  "measured_refresh_hz": null,
   "block_order": [
     "uniform",
     "right_skewed",
@@ -358,141 +348,155 @@
       "match": null
     }
   },
-  "status": "complete",
-  "started": "2026-11-21T18:29:55.092+00:00",
-  "resumed": false,
-  "finished": "2026-11-21T18:29:55.107+00:00",
-  "state_history": [
-    [
-      1795285795.093357,
-      "init",
-      "instructions"
-    ],
-    [
-      1795285795.093369,
-      "instructions",
-      "block_intro"
-    ],
-    [
-      1795285795.0933702,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.093908,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.093913,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.093914,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.097017,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.097022,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.097024,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.098745,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.098749,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.0987499,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.100459,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.1004622,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.1004622,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.102103,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.1021051,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.102106,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.1039429,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.103946,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.103946,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.105909,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.105914,
-      "block_end",
-      "block_intro"
-    ],
-    [
-      1795285795.105914,
-      "block_intro",
-      "trials"
-    ],
-    [
-      1795285795.107841,
-      "trials",
-      "block_end"
-    ],
-    [
-      1795285795.107842,
-      "block_end",
-      "done"
-    ]
+  "runs": [
+    {
+      "started": "2026-11-21T18:36:01.238+00:00",
+      "status": "complete",
+      "backend": "headless",
+      "software": {
+        "sfu": "0.1.0",
+        "python": "3.12.15",
+        "numpy": "2.5.5",
+        "platform": "macOS-27.3-arm64-arm-64bit",
+        "psychopy": "not installed",
+        "git_commit": "3c53c2359d08460c48a41ced0c3f3c2ad989d5dd"
+      },
+      "measured_refresh_hz": null,
+      "finished": "2026-11-21T18:36:01.278+00:00",
+      "state_history": [
+        [
+          1795286161.2634509,
+          "init",
+          "instructions"
+        ],
+        [
+          1795286161.2634711,
+          "instructions",
+          "block_intro"
+        ],
+        [
+          1795286161.263474,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.264023,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.264035,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.2640362,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.267444,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.26745,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.2674508,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.269109,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.269115,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.269115,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.270895,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.270899,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.270899,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.2726872,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.272692,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.272693,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.274527,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.274532,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.274532,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.276274,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.276278,
+          "block_end",
+          "block_intro"
+        ],
+        [
+          1795286161.276278,
+          "block_intro",
+          "trials"
+        ],
+        [
+          1795286161.2780428,
+          "trials",
+          "block_end"
+        ],
+        [
+          1795286161.278044,
+          "block_end",
+          "done"
+        ]
+      ],
+      "trials_logged": 276
+    }
   ],
-  "trials_logged_this_run": 276
+  "status": "complete"
 }

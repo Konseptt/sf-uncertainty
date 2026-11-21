@@ -75,7 +75,7 @@ class HeadlessBackend:
         self.t += max(n_stim * fr, rt if rt == rt else s.response_window_ms / 1000) + m.frames(trial["iti_ms"]) * fr
         return dict(stim_frames=n_stim, onset_s=onset, offset_s=onset + n_stim * fr,
                     duration_measured_ms=n_stim * fr * 1000, response=key, rt_s=rt,
-                    dropped_frames=0, frame_interval_max_ms=fr * 1000, backend=self.name, synthetic=True)
+                    dropped_frames=0, stim_dropped_frames=0, frame_interval_max_ms=fr * 1000, backend=self.name, synthetic=True)
 
 
 class PsychoPyBackend:
@@ -235,9 +235,9 @@ class PsychoPyBackend:
                 self.win.callOnFlip(self.markers.send, "stim_off")
             t = self.win.flip()
             if f == 0:
-                onset = t
+                onset, i_on = t, len(self.win.frameIntervals)
             if f == n_stim:
-                offset = t
+                offset, i_off = t, len(self.win.frameIntervals)
             for name, rt in self._keys(keyList=[self.cfg.key_left, self.cfg.key_right, self.cfg.key_quit]):
                 if name == self.cfg.key_quit:
                     raise Aborted()
@@ -252,9 +252,11 @@ class PsychoPyBackend:
             self.fix.draw(); self.win.flip()
         self._check_quit()
         iv = np.asarray(self.win.frameIntervals[1:] if self.win.frameIntervals else [0.0])
+        stim_iv = np.asarray(self.win.frameIntervals[i_on:i_off])  # intervals ending on flips 1..n_stim
         key, rt = resp if resp else ("", math.nan)
         return dict(stim_frames=n_stim, onset_s=onset, offset_s=offset, duration_measured_ms=(offset - onset) * 1000,
                     response=key, rt_s=rt, dropped_frames=int((iv > 1.5 * self.fr).sum()),
+                    stim_dropped_frames=int((stim_iv > 1.5 * self.fr).sum()),
                     frame_interval_max_ms=float(iv.max() * 1000), backend=self.name, synthetic=plan is not None)
 
     def close(self):
@@ -297,14 +299,17 @@ def run_session(cfg: ExperimentConfig, participant: str, session: int, cb_index:
                     stairs[int(r["level_index"])].update(float(r["accuracy"]) == 1.0)
 
     sm = StateMachine()
-    side = {"participant": participant, "session": session, "cb_index": cb_index, "seed": sched["seed"],
-            "config_hash": chash, "config": cfg.to_dict(), "software": software_versions(),
-            "backend": backend.name, "measured_refresh_hz": getattr(backend, "measured_hz", None),
-            "block_order": sched["order"], "grid_log2": sched["grid_log2"], "cue_symbols": sched["symbols"], "conditions": sched["conditions"],
-            "status": "running", "started": _now(), "resumed": resume}
+    side = prev if resume and side_path.exists() else {
+        "participant": participant, "session": session, "cb_index": cb_index, "seed": sched["seed"],
+        "config_hash": chash, "config": cfg.to_dict(), "block_order": sched["order"], "grid_log2": sched["grid_log2"],
+        "cue_symbols": sched["symbols"], "conditions": sched["conditions"]}
+    run = {"started": _now(), "status": "running", "backend": backend.name, "software": software_versions(),
+           "measured_refresh_hz": getattr(backend, "measured_hz", None)}
+    side.setdefault("runs", []).append(run)  # one entry per run; a resume never overwrites earlier runs
+    side["status"] = "running"
     write_json(side_path, side)
     logger = TrialLogger(csv_path)
-    common = dict(config_hash=chash, software_version=side["software"]["sfu"], units_calibrated=cfg.monitor.calibrated)
+    common = dict(config_hash=chash, software_version=run["software"]["sfu"], units_calibrated=cfg.monitor.calibrated)
     n_new = 0
     try:
         sm.to(State.INSTRUCTIONS)
@@ -339,14 +344,18 @@ def run_session(cfg: ExperimentConfig, participant: str, session: int, cb_index:
             sm.to(State.BLOCK_END)
             backend.block_end(block)
         sm.to(State.DONE)
-        side["status"] = "complete"
+        run["status"] = "complete"
     except Aborted:
         sm.to(State.ABORTED)
-        side["status"] = "aborted"
+        run["status"] = "aborted"
         log.warning("aborted after %d new trials; resume with --resume", n_new)
+    except BaseException:  # Ctrl+C or any error: data on disk is intact, mark the run so it is visible
+        run["status"] = "crashed"
+        raise
     finally:
         logger.close()
-        side.update(finished=_now(), state_history=sm.history, trials_logged_this_run=n_new)
+        run.update(finished=_now(), state_history=sm.history, trials_logged=n_new)
+        side["status"] = run["status"]
         write_json(side_path, side)
         csv_to_json(csv_path, out / "trials.json")
         backend.close()

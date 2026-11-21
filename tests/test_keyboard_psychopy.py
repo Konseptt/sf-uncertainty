@@ -50,5 +50,6 @@ def test_instructions_and_trial_receive_keys(kb_backend):
         res = be.run_trial(trial, tilt=3.0)
         assert res["response"] == "right"
         assert 0 < res["rt_s"] < 2.5
+        assert 0 <= res["stim_dropped_frames"] <= res["dropped_frames"]
     finally:
         be.close()
