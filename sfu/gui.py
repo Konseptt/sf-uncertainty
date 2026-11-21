@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import copy
 import csv
+import re
 from dataclasses import replace
 from pathlib import Path
 
@@ -101,20 +102,23 @@ class ResearcherGUI:
                 c = _set(c, path, v)
         return c.validate()
 
-    def refresh(self):
+    def refresh(self) -> bool:
+        """Rebuild schedule from the widgets. False (and an ERROR line) if any input is invalid."""
         try:
             self.cfg = self._read()
+            if not re.fullmatch(r"[A-Za-z0-9_-]+", str(self.ids["participant"])):
+                raise ValueError("participant id: letters, digits, _ and - only")
             self.sched = build_session(self.cfg, str(self.ids["participant"]), int(self.ids["session"]), int(self.ids["cb index"]))
             self.msg.set_text("")
         except (ValueError, KeyError) as e:
             self.msg.set_text(f"ERROR: {e}")
             self.fig.canvas.draw_idle()
-            return
+            return False
         self._draw()
+        return True
 
     def generate(self):
-        self.refresh()
-        if self.sched:
+        if self.refresh():
             n = sum(len(b["trials"]) for b in self.sched["blocks"])
             self.msg.set_text(f"seed {self.sched['seed']}\n{n} trials\norder: {' > '.join(self.sched['order'])}")
             self.fig.canvas.draw_idle()
@@ -161,8 +165,9 @@ class ResearcherGUI:
                        f"sampling: {c.design.sampling}    seed: {s['seed']}", fontsize=8, transform=self.ax_t.transAxes)
         self.fig.canvas.draw_idle()
 
-    def export(self) -> Path:
-        self.refresh()
+    def export(self) -> Path | None:
+        if not self.refresh():  # never export a stale schedule behind an error
+            return None
         s = self.sched
         out = self.export_dir / f"sub-{self.ids['participant']}_ses-{self.ids['session']}_seed-{s['seed']}"
         out.mkdir(parents=True, exist_ok=True)

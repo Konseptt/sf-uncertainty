@@ -224,3 +224,17 @@ def test_noiseless_gaussian_recovery_exact():
     f = fit("gauss", x, gauss(x, **true))
     for k, v in true.items():
         assert f["params"][k] == pytest.approx(v, abs=1e-4)
+
+
+def test_gui_refuses_export_on_invalid_input(tmp_path, monkeypatch):
+    monkeypatch.setenv("MPLBACKEND", "Agg")
+    import matplotlib
+    matplotlib.use("Agg")
+    from sfu.gui import ResearcherGUI
+    g = ResearcherGUI(small_cfg(), tmp_path)
+    assert g.export() is not None
+    for lab, bad in (("trials/block", "abc"), ("participant", "a b"), ("distance cm", "0")):
+        old = g.boxes[lab].text
+        g.boxes[lab].set_val(bad)
+        assert g.export() is None and g.msg.get_text().startswith("ERROR"), lab
+        g.boxes[lab].set_val(old)
