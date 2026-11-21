@@ -20,7 +20,7 @@ All distributions are defined on a log2 grid from 1 to 4 cpd (9 levels, 0.25 oct
 | broad | uncertainty | Gaussian, SD 0.463 octaves; reference variance |
 | uniform | maximal uncertainty | flat, SD 0.645 octaves; cannot be variance-matched |
 | right_skewed | asymmetry toward high SF | skew-normal, mean 2 cpd, SD 0.463, skewness +0.41 |
-| left_skewed | asymmetry toward low SF | mirror image, skewness −0.41 |
+| left_skewed | asymmetry toward low SF | mirror image, skewness -0.41 |
 | bimodal | two expected SFs | Gaussian mixture, mean 2 cpd, SD 0.463, modes 1.41 and 2.83 cpd |
 
 In the moment-matched version, means and variances are matched to within 1e-6. Entropy, skewness and kurtosis are reported but not matched, so conditions with equal variance still differ in entropy (bimodal 2.65 bits vs. broad 2.91 bits).
@@ -72,7 +72,7 @@ Read in full:
 
 Still to read and check before citing:
 
-- Aghajari, Vinke & Ling (2020), *J Neurophysiol* 123(2):773–785 (pSFT method)
+- Aghajari, Vinke & Ling (2020), *J Neurophysiol* 123(2):773-785 (pSFT method)
 - Wiecek, Ramirez, Klimova & Ling (2026), *J Neurosci* (scale invariance of SF tuning)
 - Davis, Kramer & Graham (1983), SF uncertainty in detection
 - Blakemore & Campbell (1969), SF-selective adaptation
