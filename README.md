@@ -42,7 +42,7 @@ A session runs as follows:
 2. An optional calibration block with a uniform prior. A 2-down/1-up staircase for each SF finds the tilt that gives about 71% correct, and that tilt is then fixed for the rest of the session so difficulty is equal across SFs.
 3. Six main blocks of 108 trials, one per distribution, in counterbalanced order (Williams square). Each block starts with a histogram showing how likely each SF is.
 
-The full session is about 930 trials, roughly 40 minutes. Escape stops the session without losing data, and `--resume` continues from the next trial.
+The full session is about 930 trials, roughly 40 minutes. Every trial is saved as soon as it ends. Escape stops the session, and `--resume` continues from the next unsaved trial. A resume is refused if the config, the counterbalancing row or the data columns have changed since the session started.
 
 ## Conditions
 
@@ -89,7 +89,7 @@ To run the participant display with a short demo:
 .venv-psychopy/bin/python -m sfu.runner --config configs/demo.json --participant test01 --demo --windowed
 ```
 
-`--autorespond` makes it respond on its own. The demo configs use the `event` keyboard backend, which works on macOS without extra permissions but only times responses to the nearest frame. For real RT data, use `"keyboard_backend": "ptb"` and grant the terminal Input Monitoring permission. `scripts/key_test.py` checks that key presses are being received.
+`--autorespond` makes it respond on its own. The demo configs use the `event` keyboard backend, which works on macOS without extra permissions but only times responses to the nearest frame. For real RT data, use `"keyboard_backend": "ptb"` and grant the terminal Input Monitoring permission.
 
 ### Behavioral pilot
 
@@ -134,10 +134,10 @@ Each session writes `data/<config>/sub-<ID>_ses-<N>/` containing:
 | File | Contents |
 |---|---|
 | `trials.csv`, `trials.json` | one row per trial, written to disk immediately |
-| `session.json` | config, software versions, measured refresh, block order, distribution statistics, status |
+| `session.json` | config, block order, distribution statistics, overall status, and one entry per run with start and end time, status (`complete`, `aborted` or `crashed`), software versions, measured refresh rate and trials logged |
 | `thresholds.json` | per-SF tilts from the calibration block |
 
-Trial rows record identifiers, condition and distribution parameters, SF in cpd and log2, orientation, tilt, phase, contrast and position, expected and realized probabilities, onset and offset times, measured duration, dropped frames, response, accuracy and RT, and the seeds and config hash needed to reproduce the run. The full column list is `COLUMNS` in `sfu/datalog.py`.
+Trial rows record identifiers, condition and distribution parameters, SF in cpd and log2, orientation, tilt, phase, contrast and position, expected and realized probabilities, onset and offset times, measured duration, dropped frames over the whole trial and during the stimulus alone, response, accuracy and RT, and the seeds and config hash needed to reproduce the run. The full column list is `COLUMNS` in `sfu/datalog.py`.
 
 ## Code
 
@@ -160,7 +160,7 @@ Trial rows record identifiers, condition and distribution parameters, SF in cpd 
 
 ## Status
 
-The unit tests and full headless sessions pass, and the PsychoPy window, timing and key input work on a MacBook. Nothing has yet been run on a calibrated display, with photodiode timing, with a scanner trigger or with eye tracking.
+The unit tests and full headless sessions pass. On a MacBook, the PsychoPy window and frame timing work, and key input passes a test that sends key events to a real window. Nothing has yet been run on a calibrated display, with photodiode timing, with a scanner trigger or with eye tracking.
 
 ## Not yet implemented
 
