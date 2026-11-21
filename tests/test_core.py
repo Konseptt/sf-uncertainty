@@ -179,7 +179,8 @@ def test_complete_trial_logging(tmp_path):
         assert all(r[c] != "" for c in required)
     side = json.loads((out / "session.json").read_text())
     assert side["status"] == "complete" and side["seed"] == int(rows[0]["seed"])
-    assert json.loads((out / "trials.json").read_text())["trials"][0]["trial_uid"] == "0"
+    first = json.loads((out / "trials.json").read_text())["trials"][0]
+    assert first["trial_uid"] == 0 and isinstance(first["sf_cpd"], float) and first["synthetic"] is True
 
 
 def test_abort_and_resume_no_duplicates(tmp_path):
@@ -369,3 +370,22 @@ def test_gui_fast_redraw_matches_full_redraw(tmp_path):
     g.fig.canvas.draw()
     full = np.asarray(g.fig.canvas.buffer_rgba()).copy()
     assert int((np.abs(fast.astype(int) - full.astype(int)).max(axis=2) > 30).sum()) == 0
+
+
+def test_sf_exact_at_stimulus_eccentricity():
+    import math
+    from sfu.stimulus import gabor_kwargs
+    m = small_cfg().monitor
+    for ecc in (0.0, 5.0, 10.0):
+        k = gabor_kwargs(small_cfg(), 2.0, 0, 0, 0.5, (ecc, 0.0))
+        # one cycle in px, mapped back to degrees at that position, must equal 1/2 deg
+        x0, x1 = k["pos"][0] - 0.5 / k["sf"], k["pos"][0] + 0.5 / k["sf"]  # one cycle centred on the stimulus
+        deg = math.degrees(math.atan(x1 * m.cm_per_px / m.distance_cm)) - math.degrees(math.atan(x0 * m.cm_per_px / m.distance_cm))
+        assert deg == pytest.approx(0.5, rel=1e-3), ecc
+
+
+def test_serial_trigger_rejected():
+    d = ExperimentConfig().to_dict()
+    d["design"]["trigger"] = "serial"; d["design"]["serial_port"] = "/dev/null"
+    with pytest.raises(ValueError):
+        cfgmod.from_dict(d)

@@ -189,7 +189,7 @@ def build_conditions(grid: np.ndarray, matching: Literal["mode_matched", "moment
         s, m = match_moments(DistSpec("skewnormal", {"alpha": a, "loc": center, "scale": broad_sd}), grid, center, target_var, ("loc", "scale"))
         add(name, s, m)
     s, m = match_moments(DistSpec("bimodal", {"loc": center, "sep": bimodal_sep, "scale": bimodal_sd}), grid, center, target_var, ("loc", "sep"))
-    add(name := "bimodal", s, m)
+    add("bimodal", s, m)
     return out
 
 

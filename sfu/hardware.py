@@ -8,7 +8,7 @@ import logging
 
 log = logging.getLogger("sfu.hardware")
 
-EVENT_CODES = {"block_start": 10, "fixation": 20, "stim_on": 30, "stim_off": 31, "probe_on": 40,
+EVENT_CODES = {"block_start": 10, "fixation": 20, "stim_on": 30, "stim_off": 31,
                "response": 50, "block_end": 90}
 
 
@@ -46,7 +46,6 @@ class LSLMarkers(Markers):
 
     def __init__(self, name: str = "sfu_markers"):
         import pylsl  # install only if needed
-        self.pylsl = pylsl
         info = pylsl.StreamInfo(name, "Markers", 1, pylsl.IRREGULAR_RATE, "string", name)
         self.outlet = pylsl.StreamOutlet(info)
 

@@ -79,15 +79,17 @@ def validate_distributions(df: pd.DataFrame, side: dict) -> pd.DataFrame:
 
 
 def behavior_table(df: pd.DataFrame) -> pd.DataFrame:
-    """Accuracy (Wilson 95% CI) and median correct RT (bootstrap 95% CI) by condition x SF."""
-    d = df[(df.block_type == "main") & df.accuracy.notna()]
+    """Accuracy (Wilson 95% CI), median correct RT (bootstrap 95% CI) and miss rate by condition x SF."""
     rows = []
-    for (c, sf), g in d.groupby(["condition", "sf_cpd"]):
+    for (c, sf), g_all in df[df.block_type == "main"].groupby(["condition", "sf_cpd"]):
+        g = g_all[g_all.accuracy.notna()]
         k, n = g.accuracy.sum(), len(g)
+        if n == 0:
+            continue
         lo, hi = wilson(k, n)
         rt = g.loc[g.accuracy == 1, "rt_s"]
         rlo, rhi = bootstrap_ci(rt)
-        rows.append(dict(condition=c, sf_cpd=sf, n=n, accuracy=k / n, acc_lo=lo, acc_hi=hi,
+        rows.append(dict(condition=c, sf_cpd=sf, n=n, miss_rate=1 - n / len(g_all), accuracy=k / n, acc_lo=lo, acc_hi=hi,
                          rt_median=rt.median(), rt_lo=rlo, rt_hi=rhi, mean_p_expected=g.p_expected.mean()))
     return pd.DataFrame(rows)
 

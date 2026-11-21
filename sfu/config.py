@@ -106,8 +106,9 @@ class ExperimentConfig:
         if not 0 <= g.probe_rate <= 1: err.append("probe_rate in [0, 1]")
         if not 0 < g.probe_sf_min_cpd < g.probe_sf_max_cpd or g.probe_n_levels < 2: err.append("bad probe SF range")
         if g.probe_noise_bandwidth_oct <= 0 or not 0 < g.probe_contrast <= 1: err.append("bad probe noise bandwidth or contrast")
-        if g.trigger == "serial" or g.markers == "serial":
-            if not g.serial_port: err.append("serial trigger/markers need design.serial_port")
+        if g.trigger == "serial": err.append("serial trigger input is not implemented; use trigger 'keyboard'")
+        if g.markers == "serial":
+            if not g.serial_port: err.append("serial markers need design.serial_port")
         if self.key_left == self.key_right: err.append("response keys must differ")
         if err:
             raise ValueError("invalid config:\n  " + "\n  ".join(err))

@@ -89,6 +89,20 @@ def write_json(path: Path, obj: dict) -> None:
     os.replace(tmp, path)  # atomic
 
 
+def _typed(v: str):
+    if v in ("True", "False"):
+        return v == "True"
+    for t in (int, float):
+        try:
+            x = t(v)
+            return None if x != x else x  # NaN -> null
+        except ValueError:
+            pass
+    return v
+
+
 def csv_to_json(csv_path: Path, json_path: Path) -> None:
+    """Same rows as the CSV, with numbers and booleans typed (empty or NaN -> null)."""
     with open(csv_path, newline="") as f:
-        write_json(json_path, {"trials": list(csv.DictReader(f))})
+        rows = [{k: (None if v == "" else _typed(v)) for k, v in r.items()} for r in csv.DictReader(f)]
+    write_json(json_path, {"trials": rows})

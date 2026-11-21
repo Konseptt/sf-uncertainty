@@ -170,7 +170,7 @@ Trial rows record identifiers, condition and distribution parameters, SF in cpd 
 | `datalog.py` | trial and session logging |
 | `runner.py` | session driver and command line |
 | `gui.py` | researcher interface |
-| `analysis.py` | distribution checks, accuracy and RT by SF and condition |
+| `analysis.py` | distribution checks; accuracy, RT and miss rate by SF and condition |
 | `simulation.py` | simulated tuning profiles, model fits, parameter and model recovery |
 
 ## Status

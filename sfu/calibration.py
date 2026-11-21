@@ -46,6 +46,10 @@ class Monitor:
         """Signed screen offset (px) of a point at eccentricity `ecc_deg` along one axis."""
         return self.distance_cm * math.tan(math.radians(ecc_deg)) / self.cm_per_px
 
+    def px_per_deg_at(self, ecc_deg: float) -> float:
+        """Radial pixels per degree at eccentricity `ecc_deg` (larger than at the centre on a flat screen)."""
+        return self.ecc2px(abs(ecc_deg) + 0.5) - self.ecc2px(abs(ecc_deg) - 0.5)
+
     def cpd2cpp(self, cpd: float) -> float:
         """cycles/degree -> cycles/pixel (centre-of-screen ppd)."""
         return cpd / self.px_per_deg

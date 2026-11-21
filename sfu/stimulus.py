@@ -43,9 +43,10 @@ def gabor_kwargs(cfg: ExperimentConfig, sf_cpd: float, ori: float, phase: float,
                  contrast: float, pos_deg: tuple[float, float]) -> dict:
     """Arguments for psychopy.visual.GratingStim (units='pix')."""
     m = cfg.monitor
-    size_px = m.deg2px(6 * envelope_sd_deg(cfg, sf_cpd))
+    ppd = m.px_per_deg_at(math.hypot(*pos_deg))  # local scale, so cpd is exact at the stimulus position
+    size_px = 6 * envelope_sd_deg(cfg, sf_cpd) * ppd
     return dict(tex="sin", mask="gauss", maskParams={"sd": MASK_SD}, units="pix",
-                sf=m.cpd2cpp(sf_cpd), size=size_px, ori=ori, phase=phase,
+                sf=sf_cpd / ppd, size=size_px, ori=ori, phase=phase,
                 contrast=contrast, pos=position_px(m, pos_deg), interpolate=True)
 
 
@@ -71,8 +72,9 @@ def bandpass_noise(n_px: int, px_per_deg: float, center_cpd: float, bandwidth_oc
 def noise_kwargs(cfg: ExperimentConfig, sf_cpd: float, seed: int, pos_deg: tuple[float, float]) -> dict:
     """Arguments for psychopy.visual.ImageStim showing a band-pass noise probe."""
     m, d = cfg.monitor, cfg.design
-    n = max(8, int(round(m.deg2px(6 * envelope_sd_deg(cfg, sf_cpd)))))
-    return dict(image=bandpass_noise(n, m.px_per_deg, sf_cpd, d.probe_noise_bandwidth_oct, seed),
+    ppd = m.px_per_deg_at(math.hypot(*pos_deg))
+    n = max(8, int(round(6 * envelope_sd_deg(cfg, sf_cpd) * ppd)))
+    return dict(image=bandpass_noise(n, ppd, sf_cpd, d.probe_noise_bandwidth_oct, seed),
                 mask="gauss", maskParams={"sd": MASK_SD}, units="pix", size=(n, n),
                 contrast=d.probe_contrast, pos=position_px(m, pos_deg), interpolate=False)
 
