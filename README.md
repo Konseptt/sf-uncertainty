@@ -179,7 +179,7 @@ Trial rows record identifiers, condition and distribution parameters, SF in cpd 
 
 ## Status
 
-The unit tests and full headless sessions pass. On a MacBook, the PsychoPy window and frame timing work, and key input passes a test that sends key events to a real window. Nothing has yet been run on a calibrated display, with photodiode timing, with a scanner trigger or with eye tracking.
+The unit tests and full headless sessions pass. On a MacBook, the PsychoPy window, frame timing and noise probes work, key input passes a test that sends key events to a real window, and LSL markers recorded from a full session match the logged screen flips to within 0.05 ms. Nothing has yet been run on a calibrated display, with photodiode timing, with an EEG amplifier, with a scanner trigger or with eye tracking.
 
 ## Not yet implemented
 

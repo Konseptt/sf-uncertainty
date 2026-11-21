@@ -10,6 +10,20 @@ Bloem, Bakst, McGuire and Ling (2025) varied the width of a spatial attention cu
 
 I want to ask the same question in feature space. When the upcoming SF is uncertain, does tuning in early visual cortex follow a single expected value or the full expected distribution? Changing the shape of the distribution matters here, because pSFT is not necessarily log-Gaussian, and only an asymmetric or bimodal prior can tell a log-Gaussian readout apart from one that matches the distribution.
 
+## Design origin
+
+The design follows a discussion with Sam Ling on 17 Nov 2026.
+
+| Point discussed | Where it is in the design |
+|---|---|
+| Does certainty about the upcoming SF narrow tuning, and does uncertainty broaden it? | narrow vs. broad conditions; hypothesis H1 |
+| One condition centered on 2 cpd, another spread across 1 to 4 cpd | narrow, broad and uniform conditions on a 1 to 4 cpd grid |
+| Keep the mean constant in log frequency space and vary the variance | log2 SF grid; all conditions centered on 2 cpd |
+| Feature-space analogue of the spatial uncertainty manipulation in Bloem et al. (2025), where participants are told how broad the window is | histogram cue at the start of each block |
+| Vary the shape of the distribution, e.g. a peak at 2 cpd with more probability at higher SFs | skewed and bimodal conditions; mode matching as the default |
+| fMRI SF tuning may not be log-Gaussian | asymmetric, bimodal and spline tuning models in the simulation; hypothesis H2 |
+| Stimuli of the kind the lab uses | Gabor targets; band-pass noise probes as used for pSFT mapping in Ramirez et al. (2025) |
+
 ## Conditions
 
 All distributions are defined on a log2 grid from 1 to 4 cpd (9 levels, 0.25 octave steps, centered on 2 cpd).
@@ -103,7 +117,7 @@ I have not done a systematic search yet, so I am not claiming the question is ne
 
 ## Current limitations
 
-- Tested only headless and in a windowed run on a MacBook; no calibrated display, gamma correction or photodiode check yet.
+- Tested only headless and in windowed runs on a MacBook; no calibrated display, gamma correction, photodiode check or EEG recording yet.
 - Behavioral results cannot show changes in neural tuning.
 - No exposure-matched blocks, eye tracking or serial trigger input yet.
 - The simulation uses static tuning curves, not a BOLD/HRF model.
