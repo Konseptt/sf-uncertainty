@@ -65,11 +65,18 @@ class ResearcherGUI:
                                     active=["mode_matched", "moment_matched"].index(cfg.distributions.matching))
         self.r_samp = RadioButtons(fig.add_axes([x0 + 0.125, 0.875, 0.10, 0.08]), ["fixed_count", "probability"],
                                    active=["fixed_count", "probability"].index(cfg.design.sampling))
+        # Backdrop behind the sliders, their labels and values: repainted and blitted on its own while dragging.
+        self.ax_spanel = fig.add_axes([x0, 0.835 - (len(SLIDERS) - 1) * 0.032 - 0.006, 0.25, len(SLIDERS) * 0.032],
+                                      facecolor=fig.get_facecolor())
+        self.ax_spanel.set_xticks([]); self.ax_spanel.set_yticks([])
+        for sp in self.ax_spanel.spines.values():
+            sp.set_visible(False)
         self.sliders = {}
         for i, (k, lo, hi) in enumerate(SLIDERS):
             ax = fig.add_axes([x0 + 0.07, 0.835 - i * 0.032, 0.14, 0.022])
             self.sliders[k] = Slider(ax, k, lo, hi, valinit=getattr(cfg.distributions, k))
-            self.sliders[k].on_changed(lambda _v: self.refresh())
+            self.sliders[k].drawon = False  # no full-figure redraw per mouse move
+            self.sliders[k].on_changed(lambda _v: (self._blit_sliders(), self._refresh_later()))
         fig.text(x0, 0.655, "Session / monitor / timing", weight="bold")
         self.boxes = {}
         for i, (lab, path, _t) in enumerate(FIELDS):
@@ -89,7 +96,25 @@ class ResearcherGUI:
         self.ax_d = [fig.add_axes([0.29 + (i % 3) * 0.155, 0.62 - (i // 3) * 0.27, 0.135, 0.2]) for i in range(6)]
         self.ax_g = [fig.add_axes([0.765 + i * 0.075, 0.74, 0.07, 0.17]) for i in range(3)]
         self.ax_t = fig.add_axes([0.29, 0.02, 0.69, 0.27]); self.ax_t.axis("off")
+        # A full redraw takes ~350 ms; while a slider is dragged, redraw once it pauses for 150 ms.
+        self._timer = fig.canvas.new_timer(interval=150)
+        self._timer.single_shot = True
+        self._timer.add_callback(self.refresh)
         self.refresh()
+
+    def _blit_sliders(self):
+        c = self.fig.canvas
+        if not c.supports_blit:
+            c.draw_idle()
+            return
+        self.fig.draw_artist(self.ax_spanel)
+        for sl in self.sliders.values():
+            self.fig.draw_artist(sl.ax)
+        c.blit(self.ax_spanel.bbox)
+
+    def _refresh_later(self):
+        self._timer.stop()
+        self._timer.start()
 
     # -- state ----------------------------------------------------------
     def _read(self) -> ExperimentConfig:
