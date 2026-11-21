@@ -303,8 +303,11 @@ def test_gui_run_launches_runner_with_exported_config(tmp_path, monkeypatch):
     cfg_path = cmd[cmd.index("--config") + 1]
     assert cfgmod.load(cfg_path).to_dict() == g.cfg.to_dict()
     assert cmd[cmd.index("--participant") + 1] == "R07" and "--demo" in cmd
+    g.r_mark.set_active(1)
+    cmd = g.run()
+    assert cfgmod.load(cmd[cmd.index("--config") + 1]).design.markers == "lsl"
     g.boxes["trials/block"].set_val("abc")
-    assert g.run() is None and len(calls) == 1
+    assert g.run() is None and len(calls) == 2
 
 
 def test_bandpass_noise_peaks_at_center_sf_and_is_reproducible():

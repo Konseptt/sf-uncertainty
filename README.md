@@ -136,7 +136,7 @@ The `"design"` section sets `sampling` and `cue`. `sampling` is either `fixed_co
 
 - adjust the distributions with sliders and see the six PMFs and their statistics update
 - preview Gabors at the monitor's real pixels per degree
-- set participant, session, monitor and timing values
+- set participant, session, monitor and timing values, and turn LSL markers on or off
 - generate the exact trial sequence for a participant
 - export the config, trial sequence and an overview figure
 - start the participant window with exactly these settings (**Run session**). With an uncalibrated monitor it runs as a windowed demo

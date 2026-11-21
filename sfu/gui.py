@@ -92,6 +92,10 @@ class ResearcherGUI:
         self.b_run.on_clicked(lambda _e: self.run())
         self.r_match.on_clicked(lambda _l: self.refresh())
         self.r_samp.on_clicked(lambda _l: self.refresh())
+        fig.text(x0, 0.425, "EEG markers", fontsize=9)
+        self.r_mark = RadioButtons(fig.add_axes([x0 + 0.07, 0.405, 0.16, 0.04]), ["none", "lsl"],
+                                   active=["none", "lsl"].index(cfg.design.markers if cfg.design.markers in ("none", "lsl") else "none"))
+        self.r_mark.on_clicked(lambda _l: self.refresh())
         self.msg = fig.text(x0, 0.27, "", fontsize=8, va="top", family="monospace")
         self.ax_d = [fig.add_axes([0.29 + (i % 3) * 0.155, 0.62 - (i // 3) * 0.27, 0.135, 0.2]) for i in range(6)]
         self.ax_g = [fig.add_axes([0.765 + i * 0.075, 0.74, 0.07, 0.17]) for i in range(3)]
@@ -121,7 +125,8 @@ class ResearcherGUI:
         c = self.cfg
         dist = replace(c.distributions, matching=self.r_match.value_selected,
                        **{k: float(s.val) for k, s in self.sliders.items()})
-        c = replace(c, distributions=dist, design=replace(c.design, sampling=self.r_samp.value_selected))
+        c = replace(c, distributions=dist, design=replace(c.design, sampling=self.r_samp.value_selected,
+                                                               markers=self.r_mark.value_selected))
         for lab, path, typ in FIELDS:
             v = typ(self.boxes[lab].text)
             if path is None:
