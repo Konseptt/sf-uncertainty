@@ -9,7 +9,10 @@ from __future__ import annotations
 import argparse
 import copy
 import csv
+import importlib.util
 import re
+import subprocess
+import sys
 from dataclasses import replace
 from pathlib import Path
 
@@ -78,9 +81,11 @@ class ResearcherGUI:
         self.b_exp = Button(fig.add_axes([x0 + 0.12, 0.36, 0.11, 0.04]), "Export")
         self.b_gen.on_clicked(lambda _e: self.generate())
         self.b_exp.on_clicked(lambda _e: self.export())
+        self.b_run = Button(fig.add_axes([x0, 0.31, 0.23, 0.04]), "Run session with these settings")
+        self.b_run.on_clicked(lambda _e: self.run())
         self.r_match.on_clicked(lambda _l: self.refresh())
         self.r_samp.on_clicked(lambda _l: self.refresh())
-        self.msg = fig.text(x0, 0.32, "", fontsize=8, va="top", family="monospace")
+        self.msg = fig.text(x0, 0.27, "", fontsize=8, va="top", family="monospace")
         self.ax_d = [fig.add_axes([0.29 + (i % 3) * 0.155, 0.62 - (i // 3) * 0.27, 0.135, 0.2]) for i in range(6)]
         self.ax_g = [fig.add_axes([0.765 + i * 0.075, 0.74, 0.07, 0.17]) for i in range(3)]
         self.ax_t = fig.add_axes([0.29, 0.02, 0.69, 0.27]); self.ax_t.axis("off")
@@ -181,6 +186,30 @@ class ResearcherGUI:
         self.msg.set_text(f"exported -> {out}")
         self.fig.canvas.draw_idle()
         return out
+
+    def run(self) -> list[str] | None:
+        """Export the current settings, then start the participant window with exactly that config."""
+        out = self.export()
+        if out is None:
+            return None
+        if importlib.util.find_spec("psychopy"):
+            py = sys.executable
+        else:
+            py = str(Path(__file__).resolve().parents[1] / ".venv-psychopy" / "bin" / "python")
+            if not Path(py).exists():
+                self.msg.set_text("ERROR: PsychoPy not found; install requirements-psychopy.txt")
+                self.fig.canvas.draw_idle()
+                return None
+        cmd = [py, "-m", "sfu.runner", "--config", str(out / "config.json"),
+               "--participant", str(self.ids["participant"]), "--session", str(self.ids["session"]),
+               "--cb-index", str(self.ids["cb index"])]
+        if not self.cfg.monitor.calibrated:
+            cmd += ["--demo", "--windowed"]  # uncalibrated monitor: test run only
+        subprocess.Popen(cmd, cwd=Path(__file__).resolve().parents[1])
+        self.msg.set_text(f"started {self.ids['participant']} session {self.ids['session']}"
+                          + ("\n(demo: monitor not calibrated)" if not self.cfg.monitor.calibrated else ""))
+        self.fig.canvas.draw_idle()
+        return cmd
 
 
 def main(argv=None):

@@ -287,3 +287,21 @@ def test_resume_refuses_csv_with_other_columns(tmp_path):
     (out / "trials.csv").write_text("\n".join([rows[0].replace(",stim_dropped_frames", "")] + rows[1:]) + "\n")
     with pytest.raises(RuntimeError):
         _run(small_cfg(), tmp_path, resume=True)
+
+
+def test_gui_run_launches_runner_with_exported_config(tmp_path, monkeypatch):
+    import matplotlib
+    matplotlib.use("Agg")
+    import subprocess
+    from sfu import gui
+    calls = []
+    monkeypatch.setattr(subprocess, "Popen", lambda cmd, **kw: calls.append(cmd))
+    g = gui.ResearcherGUI(small_cfg(), tmp_path)
+    g.boxes["participant"].set_val("R07")
+    cmd = g.run()
+    assert calls == [cmd]
+    cfg_path = cmd[cmd.index("--config") + 1]
+    assert cfgmod.load(cfg_path).to_dict() == g.cfg.to_dict()
+    assert cmd[cmd.index("--participant") + 1] == "R07" and "--demo" in cmd
+    g.boxes["trials/block"].set_val("abc")
+    assert g.run() is None and len(calls) == 1

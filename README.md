@@ -138,6 +138,7 @@ The `"design"` section sets `sampling` and `cue`. `sampling` is either `fixed_co
 - set participant, session, monitor and timing values
 - generate the exact trial sequence for a participant
 - export the config, trial sequence and an overview figure
+- start the participant window with exactly these settings (**Run session**). With an uncalibrated monitor it runs as a windowed demo
 
 ## Data
 
